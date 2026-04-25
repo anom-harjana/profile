@@ -454,6 +454,7 @@ grid-template-columns:1fr;
 
 <!-- ===============================
 CSS TAMBAHKAN KE <style>
+Flat Design Icon Optimized Version
 =============================== -->
 <style>
 .timeline{
@@ -462,9 +463,12 @@ display:grid;
 gap:24px;
 }
 
+/* ====================== */
+/* CARD ITEM */
+/* ====================== */
 .exp-item{
 display:grid;
-grid-template-columns:72px 1fr;
+grid-template-columns:78px 1fr;
 gap:20px;
 align-items:start;
 background:#fff;
@@ -474,6 +478,7 @@ box-shadow:0 12px 35px rgba(0,0,0,.06);
 transition:all .35s ease;
 position:relative;
 overflow:hidden;
+border:1px solid #eef3ff;
 }
 
 .exp-item:hover{
@@ -481,54 +486,19 @@ transform:translateY(-10px);
 box-shadow:0 24px 45px rgba(11,46,115,.12);
 }
 
+/* timeline line */
 .exp-item::before{
 content:"";
 position:absolute;
-left:35px;
+left:38px;
 top:-20px;
 bottom:-20px;
 width:2px;
 background:linear-gradient(180deg,#dbe6ff,#0b2e73,#dbe6ff);
-opacity:.18;
+opacity:.14;
 }
 
-.exp-icon{
-width:64px;
-height:64px;
-border-radius:18px;
-background:linear-gradient(135deg,#eaf1ff,#dbe6ff);
-display:flex;
-align-items:center;
-justify-content:center;
-position:relative;
-z-index:2;
-animation:floatExp 3s ease-in-out infinite;
-font-size:26px;
-color:#0b2e73;
-font-weight:700;
-}
-
-.exp-content h3{
-font-size:22px;
-color:#0b2e73;
-margin-bottom:6px;
-line-height:1.3;
-}
-
-.exp-content small{
-display:inline-block;
-font-size:13px;
-font-weight:700;
-color:#4f7cff;
-margin-bottom:10px;
-}
-
-.exp-content p{
-font-size:15px;
-color:#6d7a95;
-line-height:1.7;
-}
-
+/* active side bar */
 .exp-item::after{
 content:"";
 position:absolute;
@@ -546,16 +516,91 @@ transition:.35s;
 transform:scaleY(1);
 }
 
+/* ====================== */
+/* ICON AREA */
+/* ====================== */
+.exp-icon{
+width:64px;
+height:64px;
+border-radius:18px;
+background:linear-gradient(135deg,#eef4ff,#dbe6ff);
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+z-index:2;
+animation:floatExp 3s ease-in-out infinite;
+padding:12px;
+box-shadow:0 8px 18px rgba(79,124,255,.12);
+}
+
+/* image icon */
+.exp-icon img{
+width:100%;
+height:100%;
+object-fit:contain;
+display:block;
+}
+
+/* fallback emoji */
+.exp-icon span{
+font-size:30px;
+line-height:1;
+}
+
+/* ====================== */
+/* CONTENT */
+/* ====================== */
+.exp-content h3{
+font-size:22px;
+color:#0b2e73;
+margin:0 0 6px;
+line-height:1.35;
+font-weight:700;
+}
+
+.exp-content small{
+display:inline-block;
+font-size:13px;
+font-weight:700;
+color:#4f7cff;
+margin-bottom:10px;
+letter-spacing:.2px;
+}
+
+.exp-content p{
+font-size:15px;
+color:#6d7a95;
+line-height:1.75;
+margin:0;
+}
+
+.exp-content strong{
+color:#0b2e73;
+font-weight:700;
+}
+
+/* ====================== */
+/* FLOAT ANIMATION */
+/* ====================== */
 @keyframes floatExp{
 0%,100%{transform:translateY(0);}
 50%{transform:translateY(-6px);}
 }
 
+/* ====================== */
+/* MOBILE */
+/* ====================== */
 @media(max-width:768px){
+
+.timeline{
+gap:18px;
+}
 
 .exp-item{
 grid-template-columns:1fr;
 gap:16px;
+padding:20px;
 }
 
 .exp-item::before{
@@ -565,10 +610,17 @@ display:none;
 .exp-icon{
 width:58px;
 height:58px;
+border-radius:16px;
+padding:10px;
 }
 
 .exp-content h3{
 font-size:20px;
+}
+
+.exp-content p{
+font-size:14px;
+line-height:1.7;
 }
 
 }
@@ -582,6 +634,7 @@ SECTION RESEARCH EXPERIENCE
 
 <!-- ===============================
 SECTION RESEARCH EXPERIENCE 2025
+Flat Design Icons (Relevant Version)
 =============================== -->
 <section id="experience-2025">
 <div class="container">
@@ -594,7 +647,9 @@ SECTION RESEARCH EXPERIENCE 2025
 
 <!-- ITEM 1 -->
 <div class="exp-item">
-<div class="exp-icon">25</div>
+<div class="exp-icon">
+<img src="https://cdn-icons-png.flaticon.com/512/2991/2991112.png" alt="Documentation Report Icon">
+</div>
 <div class="exp-content">
 <h3>Community of Practice (CoP) Program Documentation</h3>
 <small>2025 | Principal Investigator</small>
@@ -608,7 +663,9 @@ Led documentation of good practices and lessons learned from Community of Practi
 
 <!-- ITEM 2 -->
 <div class="exp-item">
-<div class="exp-icon">25</div>
+<div class="exp-icon">
+<img src="https://cdn-icons-png.flaticon.com/512/4149/4149680.png" alt="Youth Community SDGs Icon">
+</div>
 <div class="exp-content">
 <h3>SDGs Youth Hub Program Documentation</h3>
 <small>2025 | Principal Investigator</small>
@@ -622,7 +679,9 @@ Led documentation of good practices and lessons learned from SDGs Youth Hub prog
 
 <!-- ITEM 3 -->
 <div class="exp-item">
-<div class="exp-icon">25</div>
+<div class="exp-icon">
+<img src="https://cdn-icons-png.flaticon.com/512/2785/2785482.png" alt="HIV Surveillance Icon">
+</div>
 <div class="exp-content">
 <h3>HIV Sentinel Surveillance Plus (HSS+) – Timor Leste</h3>
 <small>2025 | Consultant Team Member</small>
@@ -636,7 +695,9 @@ Supported WHO Timor Leste and Ministry of Health Timor Leste on HIV Sentinel Sur
 
 <!-- ITEM 4 -->
 <div class="exp-item">
-<div class="exp-icon">25</div>
+<div class="exp-icon">
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Evaluation Checklist Icon">
+</div>
 <div class="exp-content">
 <h3>ESLAB Program Endline Evaluation</h3>
 <small>2025 | Consultant Team Member</small>
@@ -650,7 +711,9 @@ Conducted endline evaluation of training and implementation support for ESLAB Pr
 
 <!-- ITEM 5 -->
 <div class="exp-item">
-<div class="exp-icon">25</div>
+<div class="exp-icon">
+<img src="https://cdn-icons-png.flaticon.com/512/2920/2920329.png" alt="Maternal Child Health Baseline Icon">
+</div>
 <div class="exp-content">
 <h3>Baseline Study for EMTCT Pilot Implementation</h3>
 <small>2025 | Consultant Team Member</small>
@@ -664,7 +727,9 @@ Implemented baseline study for EMTCT pilot implementation in 15 districts across
 
 <!-- ITEM 6 -->
 <div class="exp-item">
-<div class="exp-icon">25</div>
+<div class="exp-icon">
+<img src="https://cdn-icons-png.flaticon.com/512/4320/4320337.png" alt="Community Clinic HIV STI Icon">
+</div>
 <div class="exp-content">
 <h3>Development of Pos Layanan Komunitas HIV & STI</h3>
 <small>2025 | Principal Investigator</small>
@@ -683,6 +748,7 @@ Led technical assistance for development of Pos Layanan Komunitas HIV and STI in
 
 <!-- ===============================
 SECTION RESEARCH EXPERIENCE 2024
+Flat Design Icons (Relevant Version)
 =============================== -->
 <section id="experience">
 <div class="container">
@@ -695,7 +761,9 @@ SECTION RESEARCH EXPERIENCE 2024
 
 <!-- ITEM 1 -->
 <div class="exp-item">
-<div class="exp-icon">24</div>
+<div class="exp-icon">
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Monitoring Evaluation Dashboard Icon">
+</div>
 <div class="exp-content">
 <h3>Development of EMTCT Monitoring & Evaluation Tools</h3>
 <small>2024 | Consultant Team Member</small>
@@ -709,7 +777,9 @@ Developed monitoring and evaluation tools for pilot implementation of the EMTCT 
 
 <!-- ITEM 2 -->
 <div class="exp-item">
-<div class="exp-icon">24</div>
+<div class="exp-icon">
+<img src="https://cdn-icons-png.flaticon.com/512/4149/4149688.png" alt="Social Media Campaign Evaluation Icon">
+</div>
 <div class="exp-content">
 <h3>Evaluation Study of RHRN2 Social Media Campaign</h3>
 <small>2024 | Principal Investigator</small>
@@ -723,7 +793,9 @@ Led national evaluation study of the Right Here Right Now 2 (RHRN2) campaign in 
 
 <!-- ITEM 3 -->
 <div class="exp-item">
-<div class="exp-icon">24</div>
+<div class="exp-icon">
+<img src="https://cdn-icons-png.flaticon.com/512/2785/2785482.png" alt="Vaccination Health Worker Icon">
+</div>
 <div class="exp-content">
 <h3>Healthcare Worker Perspectives on Influenza Vaccination</h3>
 <small>2024 | Consultant Team Member</small>
@@ -737,7 +809,9 @@ Conducted study on health workers’ perspectives toward influenza vaccination i
 
 <!-- ITEM 4 -->
 <div class="exp-item">
-<div class="exp-icon">24</div>
+<div class="exp-icon">
+<img src="https://cdn-icons-png.flaticon.com/512/2910/2910768.png" alt="Partnership Social Contracting Icon">
+</div>
 <div class="exp-content">
 <h3>Assessment of Social Contracting Implementation</h3>
 <small>2024 | Principal Investigator</small>
@@ -756,6 +830,7 @@ Led national assessment of social contracting implementation in Indonesia.
 
 <!-- ===============================
 SECTION RESEARCH EXPERIENCE 2023
+Flat Design Icons (Relevant Version)
 =============================== -->
 <section id="experience-2023">
 <div class="container">
@@ -768,7 +843,9 @@ SECTION RESEARCH EXPERIENCE 2023
 
 <!-- ITEM 1 -->
 <div class="exp-item">
-<div class="exp-icon">23</div>
+<div class="exp-icon">
+<img src="https://cdn-icons-png.flaticon.com/512/4149/4149680.png" alt="Community Network Response Icon">
+</div>
 <div class="exp-content">
 <h3>Engagement of Last Mile Populations and Community Structures</h3>
 <small>2023 | Principal Investigator</small>
@@ -782,7 +859,9 @@ Led study on engagement of last mile populations and community structures in the
 
 <!-- ITEM 2 -->
 <div class="exp-item">
-<div class="exp-icon">23</div>
+<div class="exp-icon">
+<img src="https://cdn-icons-png.flaticon.com/512/2785/2785482.png" alt="Healthcare Stigma Research Icon">
+</div>
 <div class="exp-content">
 <h3>HIV-related Stigma and Discrimination in Health Care Settings</h3>
 <small>2023 | Senior Researcher</small>
@@ -796,7 +875,9 @@ Served as senior researcher in national study on HIV-related stigma and discrimi
 
 <!-- ITEM 3 -->
 <div class="exp-item">
-<div class="exp-icon">23</div>
+<div class="exp-icon">
+<img src="https://cdn-icons-png.flaticon.com/512/2910/2910768.png" alt="PrEP Technical Assistance Icon">
+</div>
 <div class="exp-content">
 <h3>Technical Assistance on PrEP Implementation</h3>
 <small>2023 | Consultant Team Member</small>
@@ -810,7 +891,9 @@ Provided technical assistance and implementation support for national PrEP progr
 
 <!-- ITEM 4 -->
 <div class="exp-item">
-<div class="exp-icon">23</div>
+<div class="exp-icon">
+<img src="https://cdn-icons-png.flaticon.com/512/2910/2910768.png" alt="Mosquito Technology Survey Icon">
+</div>
 <div class="exp-content">
 <h3>Community-based Surveys for Wolbachia Technology</h3>
 <small>2023 | Principal Investigator</small>
@@ -829,6 +912,7 @@ Led community-based surveys supporting implementation of Wolbachia technology to
 
 <!-- ===============================
 SECTION RESEARCH EXPERIENCE 2022
+Flat Design Icons (Relevant Version)
 =============================== -->
 <section id="experience-2022">
 <div class="container">
@@ -841,7 +925,9 @@ SECTION RESEARCH EXPERIENCE 2022
 
 <!-- ITEM 1 -->
 <div class="exp-item">
-<div class="exp-icon">22</div>
+<div class="exp-icon">
+<img src="https://cdn-icons-png.flaticon.com/512/2920/2920329.png" alt="Maternal Neonatal Health Icon">
+</div>
 <div class="exp-content">
 <h3>Maternal and Neonatal Services Pocketbook in Health Crises</h3>
 <small>2022 | Principal Investigator</small>
@@ -855,7 +941,9 @@ Led development of national pocketbook for maternal and neonatal services during
 
 <!-- ITEM 2 -->
 <div class="exp-item">
-<div class="exp-icon">22</div>
+<div class="exp-icon">
+<img src="https://cdn-icons-png.flaticon.com/512/2785/2785482.png" alt="HIV STI Services Icon">
+</div>
 <div class="exp-content">
 <h3>HIV and STI Services Module in Health Crises</h3>
 <small>2022 | Principal Investigator</small>
@@ -869,7 +957,9 @@ Led development of training modules and pocketbook for HIV and STI services duri
 
 <!-- ITEM 3 -->
 <div class="exp-item">
-<div class="exp-icon">22</div>
+<div class="exp-icon">
+<img src="https://cdn-icons-png.flaticon.com/512/3209/3209265.png" alt="HIV Self Testing Icon">
+</div>
 <div class="exp-content">
 <h3>Supporting Implementation of HIV Self Testing (HIVST)</h3>
 <small>2022 | Consultant Team Member</small>
@@ -883,7 +973,9 @@ Supported national implementation strategy and operationalization of HIV Self Te
 
 <!-- ITEM 4 -->
 <div class="exp-item">
-<div class="exp-icon">22</div>
+<div class="exp-icon">
+<img src="https://cdn-icons-png.flaticon.com/512/2620/2620971.png" alt="Monitoring Dashboard Icon">
+</div>
 <div class="exp-content">
 <h3>Integrated Monitoring and Evaluation System for HIVST</h3>
 <small>2022 | Principal Investigator</small>
@@ -897,7 +989,9 @@ Led development of integrated monitoring and evaluation system for HIV Self Test
 
 <!-- ITEM 5 -->
 <div class="exp-item">
-<div class="exp-icon">22</div>
+<div class="exp-icon">
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135706.png" alt="Costing Analysis Icon">
+</div>
 <div class="exp-content">
 <h3>Costing Study of HIVST Implementation</h3>
 <small>2022 | Consultant Team Member</small>
@@ -911,7 +1005,9 @@ Conducted costing study for implementation and scale-up of HIV Self Testing (HIV
 
 <!-- ITEM 6 -->
 <div class="exp-item">
-<div class="exp-icon">22</div>
+<div class="exp-icon">
+<img src="https://cdn-icons-png.flaticon.com/512/4320/4320371.png" alt="Vaccine Public Perception Icon">
+</div>
 <div class="exp-content">
 <h3>Public Trust and Perception on COVID-19 Booster Vaccine</h3>
 <small>2022 | Consultant Team Member</small>
@@ -930,6 +1026,7 @@ Conducted national study on public trust and perception toward COVID-19 booster 
 
 <!-- ===============================
 SECTION RESEARCH EXPERIENCE 2021
+Flat Design Icons (Relevant Version)
 =============================== -->
 <section id="experience-2021">
 <div class="container">
@@ -942,7 +1039,9 @@ SECTION RESEARCH EXPERIENCE 2021
 
 <!-- ITEM 1 -->
 <div class="exp-item">
-<div class="exp-icon">21</div>
+<div class="exp-icon">
+<img src="https://cdn-icons-png.flaticon.com/512/4320/4320337.png" alt="Community Guideline Icon">
+</div>
 <div class="exp-content">
 <h3>Comprehensive HIV and STI Community Program Guideline in Disaster Settings</h3>
 <small>2021 | Principal Investigator</small>
@@ -956,7 +1055,9 @@ Led development of national guideline for comprehensive HIV and STI programs in 
 
 <!-- ITEM 2 -->
 <div class="exp-item">
-<div class="exp-icon">21</div>
+<div class="exp-icon">
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="Training Module Icon">
+</div>
 <div class="exp-content">
 <h3>Training of Facilitators (ToF) Module for HIV and STI Crisis Response</h3>
 <small>2021 | Principal Investigator</small>
@@ -970,7 +1071,9 @@ Led development of Training of Facilitators (ToF) module for comprehensive HIV a
 
 <!-- ITEM 3 -->
 <div class="exp-item">
-<div class="exp-icon">21</div>
+<div class="exp-icon">
+<img src="https://cdn-icons-png.flaticon.com/512/2966/2966480.png" alt="Maternal HIV Assessment Icon">
+</div>
 <div class="exp-content">
 <h3>Indonesia Readiness Assessment for EMTCT HIV</h3>
 <small>2021 | Principal Investigator</small>
@@ -984,7 +1087,9 @@ Led national assessment of Indonesia’s readiness to eliminate mother-to-child 
 
 <!-- ITEM 4 -->
 <div class="exp-item">
-<div class="exp-icon">21</div>
+<div class="exp-icon">
+<img src="https://cdn-icons-png.flaticon.com/512/2785/2785482.png" alt="HIV Disclosure MSM Icon">
+</div>
 <div class="exp-content">
 <h3>HIV Status Disclosure among MSM and Transgender Women</h3>
 <small>2021 | Principal Investigator</small>
@@ -998,7 +1103,9 @@ Conducted study on determinants of HIV status disclosure practice among MSM and 
 
 <!-- ITEM 5 -->
 <div class="exp-item">
-<div class="exp-icon">21</div>
+<div class="exp-icon">
+<img src="https://cdn-icons-png.flaticon.com/512/616/616554.png" alt="Rabies Surveillance Icon">
+</div>
 <div class="exp-content">
 <h3>Rabies Control (RACON) Mobile Surveillance System</h3>
 <small>2021 | Consultant Team Member</small>
@@ -1018,6 +1125,7 @@ Contributed to development of Rabies Control (RACON), a mobile-based rabies surv
 
 <!-- ===============================
 SECTION RESEARCH EXPERIENCE 2014-2020
+Flat Design Icons (Relevant Version)
 =============================== -->
 <section id="experience-2014-2020">
 <div class="container">
@@ -1030,7 +1138,7 @@ SECTION RESEARCH EXPERIENCE 2014-2020
 
 <!-- 2020 -->
 <div class="exp-item">
-<div class="exp-icon">20</div>
+<div class="exp-icon"><img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png" alt="Mobile App Icon"></div>
 <div class="exp-content">
 <h3>Development of Kita Banget App for HIV Services</h3>
 <small>2020 | Consultant Team Member</small>
@@ -1043,7 +1151,7 @@ Contributed to development of Kita Banget mobile application to improve HIV serv
 </div>
 
 <div class="exp-item">
-<div class="exp-icon">20</div>
+<div class="exp-icon"><img src="https://cdn-icons-png.flaticon.com/512/2785/2785544.png" alt="Hand Hygiene Icon"></div>
 <div class="exp-content">
 <h3>Public Perception and Hand Hygiene during COVID-19</h3>
 <small>2020 | Consultant Team Member</small>
@@ -1056,7 +1164,7 @@ Conducted national study on public perception and hand hygiene behavior during t
 </div>
 
 <div class="exp-item">
-<div class="exp-icon">20</div>
+<div class="exp-icon"><img src="https://cdn-icons-png.flaticon.com/512/2966/2966480.png" alt="Mental Health Icon"></div>
 <div class="exp-content">
 <h3>Mental Health of Balinese Migrant Workers during COVID-19</h3>
 <small>2020 | Principal Investigator</small>
@@ -1070,7 +1178,7 @@ Led study on prevalence and determinants of depression, anxiety, and stress amon
 
 <!-- 2019-2020 -->
 <div class="exp-item">
-<div class="exp-icon">19</div>
+<div class="exp-icon"><img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="Partner Notification Icon"></div>
 <div class="exp-content">
 <h3>Partner Notification Demonstration Sites</h3>
 <small>2019–2020 | Consultant Team Member</small>
@@ -1083,7 +1191,7 @@ Supported demonstration sites for assisted partner notification implementation i
 </div>
 
 <div class="exp-item">
-<div class="exp-icon">19</div>
+<div class="exp-icon"><img src="https://cdn-icons-png.flaticon.com/512/2921/2921822.png" alt="Breastfeeding Icon"></div>
 <div class="exp-content">
 <h3>BENEFIT Breastfeeding Intervention Study</h3>
 <small>2019–2020 | Monitoring & Evaluation Officer</small>
@@ -1096,7 +1204,7 @@ Implementation study of BENEFIT intervention in five selected districts in East 
 </div>
 
 <div class="exp-item">
-<div class="exp-icon">19</div>
+<div class="exp-icon"><img src="https://cdn-icons-png.flaticon.com/512/888/888879.png" alt="Electronic Record Icon"></div>
 <div class="exp-content">
 <h3>Electronic Personal Health Record – Badung</h3>
 <small>2019–2020 | Principal Investigator</small>
@@ -1109,7 +1217,7 @@ Led development of electronic personal health record system in Badung Regency.
 </div>
 
 <div class="exp-item">
-<div class="exp-icon">19</div>
+<div class="exp-icon"><img src="https://cdn-icons-png.flaticon.com/512/2920/2920329.png" alt="Online Survey Icon"></div>
 <div class="exp-content">
 <h3>SEKSI Online Sexual Health Study</h3>
 <small>2019–2020 | Consultant Team Member</small>
@@ -1122,7 +1230,7 @@ Online survey exploring identity, social interaction, and HIV prevention behavio
 </div>
 
 <div class="exp-item">
-<div class="exp-icon">19</div>
+<div class="exp-icon"><img src="https://cdn-icons-png.flaticon.com/512/3079/3079167.png" alt="Nutrition Growth Icon"></div>
 <div class="exp-content">
 <h3>Stunting Prevention Mentoring Program</h3>
 <small>2019–2020 | Consultant Team Member</small>
@@ -1136,7 +1244,7 @@ Supported mentoring program for stunting prevention in Gianyar Regency, Bali.
 
 <!-- 2019 -->
 <div class="exp-item">
-<div class="exp-icon">19</div>
+<div class="exp-icon"><img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Survey Icon"></div>
 <div class="exp-content">
 <h3>Patient Satisfaction Survey – PHC Buleleng</h3>
 <small>2019 | Principal Investigator</small>
@@ -1148,7 +1256,7 @@ Led patient satisfaction survey in Primary Health Care No. III, Buleleng Distric
 </div>
 
 <div class="exp-item">
-<div class="exp-icon">19</div>
+<div class="exp-icon"><img src="https://cdn-icons-png.flaticon.com/512/3209/3209265.png" alt="Family Planning Icon"></div>
 <div class="exp-content">
 <h3>Ideal Child Preference & Contraceptive Use in Bali</h3>
 <small>2019 | Consultant Team Member</small>
@@ -1161,7 +1269,7 @@ Study on impact of birth preference and ideal child number toward contraceptive 
 </div>
 
 <div class="exp-item">
-<div class="exp-icon">19</div>
+<div class="exp-icon"><img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Hospital Survey Icon"></div>
 <div class="exp-content">
 <h3>Patient Satisfaction Survey – Sanjiwani Hospital</h3>
 <small>2019 | Principal Investigator</small>
@@ -1173,7 +1281,7 @@ Led patient satisfaction survey in Sanjiwani Hospital, Gianyar Regency.
 </div>
 
 <div class="exp-item">
-<div class="exp-icon">19</div>
+<div class="exp-icon"><img src="https://cdn-icons-png.flaticon.com/512/2921/2921822.png" alt="Breastfeeding Assessment Icon"></div>
 <div class="exp-content">
 <h3>Ten Steps to Successful Breastfeeding Assessment</h3>
 <small>2019 | Consultant Team Member</small>
@@ -1186,7 +1294,7 @@ Assessment of Ten Steps to Successful Breastfeeding and facilitation of evidence
 </div>
 
 <div class="exp-item">
-<div class="exp-icon">19</div>
+<div class="exp-icon"><img src="https://cdn-icons-png.flaticon.com/512/3079/3079167.png" alt="Nutrition Assessment Icon"></div>
 <div class="exp-content">
 <h3>Nutrition & Environmental Problem Assessment</h3>
 <small>2019 | Data Manager</small>
@@ -1197,34 +1305,9 @@ Assessment among adolescents, pregnant women, and under-five children in Karanga
 </div>
 </div>
 
-<!-- 2018-2020 -->
-<div class="exp-item">
-<div class="exp-icon">18</div>
-<div class="exp-content">
-<h3>Patient Satisfaction Survey – Gianyar Regency</h3>
-<small>2018–2020 | Principal Investigator</small>
-<p>
-Multi-year patient satisfaction survey in primary health care services across Gianyar Regency.  
-<strong>Project Value:</strong> IDR 55,980,000
-</p>
-</div>
-</div>
-
-<div class="exp-item">
-<div class="exp-icon">18</div>
-<div class="exp-content">
-<h3>Patient Satisfaction Survey – Denpasar City</h3>
-<small>2018–2020 | Principal Investigator</small>
-<p>
-Multi-year patient satisfaction survey in public primary health care services in Denpasar City.  
-<strong>Project Value:</strong> IDR 105,000,000
-</p>
-</div>
-</div>
-
 <!-- 2018 -->
 <div class="exp-item">
-<div class="exp-icon">18</div>
+<div class="exp-icon"><img src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png" alt="Youth Health Icon"></div>
 <div class="exp-content">
 <h3>Young Health Program Baseline Study</h3>
 <small>2018 | Consultant Team Member</small>
@@ -1237,7 +1320,7 @@ Baseline study implemented in Cibinong, Jakarta, and Mataram.
 </div>
 
 <div class="exp-item">
-<div class="exp-icon">18</div>
+<div class="exp-icon"><img src="https://cdn-icons-png.flaticon.com/512/2785/2785819.png" alt="Vaccine Survey Icon"></div>
 <div class="exp-content">
 <h3>Japanese Encephalitis Vaccine Coverage Survey</h3>
 <small>2018 | Data Manager</small>
@@ -1250,7 +1333,7 @@ Provincial vaccine coverage survey in Bali Province.
 </div>
 
 <div class="exp-item">
-<div class="exp-icon">18</div>
+<div class="exp-icon"><img src="https://cdn-icons-png.flaticon.com/512/888/888879.png" alt="Surveillance System Icon"></div>
 <div class="exp-content">
 <h3>Outbreak Surveillance Information System</h3>
 <small>2018 | Principal Investigator</small>
@@ -1262,7 +1345,7 @@ Developed outbreak surveillance information system based on Epicollect5 data col
 </div>
 
 <div class="exp-item">
-<div class="exp-icon">18</div>
+<div class="exp-icon"><img src="https://cdn-icons-png.flaticon.com/512/4149/4149647.png" alt="Student Club Icon"></div>
 <div class="exp-content">
 <h3>Udayana One Health Student Club Study</h3>
 <small>2018 | Principal Investigator</small>
@@ -1275,7 +1358,7 @@ Research on student self-efficacy and cultural competence in health professional
 
 <!-- 2017 -->
 <div class="exp-item">
-<div class="exp-icon">17</div>
+<div class="exp-icon"><img src="https://cdn-icons-png.flaticon.com/512/616/616554.png" alt="Rabies Awareness Icon"></div>
 <div class="exp-content">
 <h3>Janger Dance for Rabies Awareness</h3>
 <small>2017 | Consultant Team Member</small>
@@ -1287,7 +1370,7 @@ Creative media intervention to improve rabies awareness and participation throug
 </div>
 
 <div class="exp-item">
-<div class="exp-icon">17</div>
+<div class="exp-icon"><img src="https://cdn-icons-png.flaticon.com/512/3039/3039386.png" alt="Cinema Education Icon"></div>
 <div class="exp-content">
 <h3>Cinema in the Bus Project</h3>
 <small>2017 | Principal Investigator</small>
@@ -1301,7 +1384,7 @@ Evaluated intervention to increase adolescent knowledge on sexual and reproducti
 
 <!-- 2014-2016 -->
 <div class="exp-item">
-<div class="exp-icon">14</div>
+<div class="exp-icon"><img src="https://cdn-icons-png.flaticon.com/512/3140/3140347.png" alt="Smoke Free Policy Icon"></div>
 <div class="exp-content">
 <h3>Opinion Poll on Bali Smoke-Free Law</h3>
 <small>2014–2016 | Enumerator</small>
