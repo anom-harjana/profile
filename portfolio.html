@@ -451,71 +451,594 @@ grid-template-columns:1fr;
 </header>
 
 
-<!-- Knowledge Library with Carousel + Search Bar -->
 <style>
-.library-section{padding:80px 0;background:#f8fbff}
-.library-toolbar{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:20px 0 30px}
-.search-bar{flex:1;min-width:260px;max-width:520px}
-.search-bar input{width:100%;padding:14px 18px;border:1px solid #d9e5ff;border-radius:14px;font-size:15px}
-.sub-tabs{display:flex;gap:10px;flex-wrap:wrap}
-.sub-tabs button{border:0;padding:12px 16px;border-radius:12px;background:#eaf1ff;color:#0b2e73;font-weight:700;cursor:pointer}
-.sub-tabs button.active{background:linear-gradient(135deg,#0b2e73,#4f7cff);color:#fff}
-.carousel-wrap{display:none}.carousel-wrap.active{display:block}
-.carousel-track{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(320px,360px);gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px}
-.carousel-track::-webkit-scrollbar{height:8px}.carousel-track::-webkit-scrollbar-thumb{background:#c6d8ff;border-radius:20px}
-.card{scroll-snap-align:start;background:#fff;border-radius:24px;padding:18px;box-shadow:0 12px 35px rgba(0,0,0,.06);display:grid;gap:14px}
-.preview{height:240px;border-radius:18px;overflow:hidden;background:#eef4ff}.preview iframe{width:100%;height:100%;border:0}
-.card h4{margin:0;color:#0b2e73}.meta{font-size:13px;color:#4f7cff;font-weight:700}.btn{display:inline-block;padding:12px 16px;border-radius:12px;background:linear-gradient(135deg,#0b2e73,#4f7cff);color:#fff;text-decoration:none;font-weight:700}
-@media(max-width:768px){.carousel-track{grid-auto-columns:88%}.preview{height:210px}}
+.library{
+padding:90px 0;
+background:linear-gradient(180deg,#f8fbff,#ffffff);
+}
+
+.toolbar{
+display:grid;
+grid-template-columns:1fr 180px;
+gap:14px;
+margin:24px 0 34px;
+}
+
+.search input,
+#sortLib{
+width:100%;
+padding:15px 18px;
+border:1px solid #d9e5ff;
+border-radius:14px;
+font-size:15px;
+outline:none;
+background:#fff;
+}
+
+.tabs{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-bottom:18px;
+}
+
+.tabs button{
+border:0;
+padding:12px 18px;
+border-radius:14px;
+background:#eaf1ff;
+color:#0b2e73;
+font-weight:700;
+cursor:pointer;
+transition:.3s;
+}
+
+.tabs button.active{
+background:linear-gradient(135deg,#0b2e73,#4f7cff);
+color:#fff;
+}
+
+.panel{
+display:none;
+}
+
+.panel.active{
+display:block;
+}
+
+.track{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:24px;
+}
+
+.card{
+background:#fff;
+border-radius:24px;
+overflow:hidden;
+box-shadow:0 14px 38px rgba(0,0,0,.07);
+transition:.35s;
+display:grid;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 24px 48px rgba(11,46,115,.14);
+}
+
+.thumb{
+height:250px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#eef4ff;
+}
+
+.thumb img{
+width:160px;
+height:235px;
+object-fit:cover;
+border-radius:10px;
+box-shadow:-10px 12px 22px rgba(0,0,0,.16);
+}
+
+.mockup{
+width:160px;
+height:235px;
+border-radius:16px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:58px;
+background:linear-gradient(135deg,#eaf1ff,#dbe6ff);
+color:#0b2e73;
+box-shadow:-10px 12px 22px rgba(0,0,0,.14);
+}
+
+.body{
+padding:18px;
+}
+
+.badge{
+display:inline-block;
+padding:6px 10px;
+border-radius:999px;
+font-size:12px;
+font-weight:700;
+background:#eaf1ff;
+color:#0b2e73;
+margin-bottom:10px;
+}
+
+.body h4{
+margin:0 0 8px;
+color:#0b2e73;
+font-size:20px;
+line-height:1.35;
+min-height:54px;
+}
+
+.meta{
+font-size:13px;
+color:#6d7a95;
+margin-bottom:10px;
+}
+
+.body p{
+margin:0 0 14px;
+color:#6d7a95;
+font-size:14px;
+line-height:1.7;
+min-height:72px;
+}
+
+.actions{
+display:flex;
+gap:10px;
+}
+
+.btn{
+flex:1;
+display:inline-block;
+text-align:center;
+padding:12px 16px;
+border-radius:12px;
+text-decoration:none;
+font-weight:700;
+font-size:13px;
+}
+
+.btn-outline{
+border:1px solid #d9e5ff;
+color:#0b2e73;
+background:#fff;
+}
+
+.btn-primary{
+color:#fff;
+background:linear-gradient(135deg,#0b2e73,#4f7cff);
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:16px;
+margin-bottom:22px;
+}
+
+.stat{
+background:#fff;
+padding:18px;
+border-radius:18px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.05);
+}
+
+.stat h3{
+margin:0;
+color:#0b2e73;
+}
+
+.stat span{
+font-size:13px;
+color:#6d7a95;
+}
+
+@media(max-width:768px){
+
+.toolbar{
+grid-template-columns:1fr;
+}
+
+.track{
+grid-template-columns:1fr;
+}
+
+.stats{
+grid-template-columns:1fr;
+}
+
+.thumb{
+height:220px;
+}
+
+}
 </style>
-<section id="knowledge-library" class="library-section">
+
+
+
+<section id="knowledge-library" class="library">
 <div class="container">
-<div class="top"><h2>Knowledge Library</h2><p>Books, Working Papers, and Prototypes</p></div>
-<div class="library-toolbar">
-<div class="search-bar"><input type="text" id="librarySearch" placeholder="Search title, source, keyword..."></div>
-<div class="sub-tabs">
-<button class="tab-btn active" data-target="books">Books</button>
-<button class="tab-btn" data-target="papers">Working Papers</button>
-<button class="tab-btn" data-target="proto">Prototypes</button>
+
+<div class="top">
+<h2>Portfolio</h2>
+<p>Books, Working Papers, and Prototypes</p>
+</div>
+
+<div class="stats">
+<div class="stat"><h3>12+</h3><span>Books</span></div>
+<div class="stat"><h3>25+</h3><span>Working Papers</span></div>
+<div class="stat"><h3>8+</h3><span>Prototypes</span></div>
+</div>
+
+<div class="tabs">
+<button class="tab active" data-tab="books">Books</button>
+<button class="tab" data-tab="papers">Working Papers</button>
+<button class="tab" data-tab="apps">Prototypes</button>
+</div>
+
+<div class="toolbar">
+<div class="search">
+<input id="searchLib" placeholder="Search books, papers, apps...">
+</div>
+
+<select id="sortLib">
+<option value="az">A-Z</option>
+<option value="za">Z-A</option>
+</select>
+</div>
+
+
+
+<!-- BOOKS -->
+<div class="panel active" id="books">
+<div class="track">
+
+<!-- BOOK 1 -->
+<div class="card item" data-title="Featured Academic Book" data-key="book google play OAdTEQAAQBAJ">
+<div class="thumb">
+<img src="https://books.google.co.id/books/publisher/content/images/frontcover/OAdTEQAAQBAJ?fife=w300-h450"
+onerror="this.src='https://via.placeholder.com/160x235?text=No+Cover'">
+</div>
+<div class="body">
+<span class="badge">Google Play Book</span>
+<h4>3 Hari Jago RStudio</h4>
+<div class="meta">Ngakan Putu Anom Harjana</div>
+<p>Published academic book available on Google Play Books.</p>
+<div class="actions">
+<a class="btn btn-outline" target="_blank" href="https://books.google.com/books?id=OAdTEQAAQBAJ">Preview</a>
+<a class="btn btn-primary" target="_blank" href="https://play.google.com/store/books/details?id=OAdTEQAAQBAJ">Read Now</a>
+</div>
 </div>
 </div>
 
-<div class="carousel-wrap active" id="books">
-<div class="carousel-track">
-<div class="card" data-search="book google play research methods">
-<div class="preview"><iframe src="https://play.google.com/books/reader?id=OAdTEQAAQBAJ&pg=GBS.PP1"></iframe></div>
-<h4>Featured Book</h4><div class="meta">Google Play Books</div>
-<a class="btn" target="_blank" href="https://play.google.com/store/books/details?id=OAdTEQAAQBAJ">Read Now</a>
+<!-- BOOK 2 -->
+<div class="card item" data-title="Google Play Book lSs7EQAAQBAJ" data-key="book google play lSs7EQAAQBAJ">
+<div class="thumb">
+<img src="https://books.google.co.id/books/publisher/content/images/frontcover/lSs7EQAAQBAJ?fife=w300-h450"
+onerror="this.src='https://via.placeholder.com/160x235?text=No+Cover'">
 </div>
-</div></div>
+<div class="body">
+<span class="badge">Google Play Book</span>
+<h4>Pemodelan Kesehatan</h4>
+<div class="meta">Ngakan Putu Anom Harjana</div>
+<p>Published academic book available on Google Play Books.</p>
+<div class="actions">
+<a class="btn btn-outline" target="_blank" href="https://books.google.com/books?id=lSs7EQAAQBAJ">Preview</a>
+<a class="btn btn-primary" target="_blank" href="https://play.google.com/store/books/details?id=lSs7EQAAQBAJ">Read Now</a>
+</div>
+</div>
+</div>
 
-<div class="carousel-wrap" id="papers">
-<div class="carousel-track">
-<div class="card" data-search="research square preprint hiv">
-<div class="preview"><iframe src="https://www.researchsquare.com/article/rs-8651198/v1"></iframe></div>
-<h4>Research Square Preprint</h4><div class="meta">Research Square</div>
-<a class="btn" target="_blank" href="https://www.researchsquare.com/article/rs-8651198/v1">Read Now</a>
+<!-- BOOK 3 -->
+<div class="card item" data-title="Google Play Book aGxGEQAAQBAJ" data-key="book google play aGxGEQAAQBAJ">
+<div class="thumb">
+<img src="https://books.google.co.id/books/publisher/content/images/frontcover/aGxGEQAAQBAJ?fife=w300-h450"
+onerror="this.src='https://via.placeholder.com/160x235?text=No+Cover'">
 </div>
-<div class="card" data-search="zenodo working paper public health">
-<div class="preview"><iframe src="https://zenodo.org/records/19704531"></iframe></div>
-<h4>Zenodo Working Paper</h4><div class="meta">Zenodo</div>
-<a class="btn" target="_blank" href="https://zenodo.org/records/19704531">Read Now</a>
+<div class="body">
+<span class="badge">Google Play Book</span>
+<h4>The Health Fallacy</h4>
+<div class="meta">Ngakan Putu Anom Harjana</div>
+<p>Published academic book available on Google Play Books.</p>
+<div class="actions">
+<a class="btn btn-outline" target="_blank" href="https://books.google.com/books?id=aGxGEQAAQBAJ">Preview</a>
+<a class="btn btn-primary" target="_blank" href="https://play.google.com/store/books/details?id=aGxGEQAAQBAJ">Read Now</a>
 </div>
-</div></div>
+</div>
+</div>
 
-<div class="carousel-wrap" id="proto">
-<div class="carousel-track">
-<div class="card" data-search="prototype dashboard app">
-<div class="preview"><iframe src="https://example.com"></iframe></div>
-<h4>Prototype Demo</h4><div class="meta">Web App</div>
-<a class="btn" target="_blank" href="https://example.com">Read Now</a>
+<!-- BOOK 4 -->
+<div class="card item" data-title="Google Play Book w19LEQAAQBAJ" data-key="book google play w19LEQAAQBAJ">
+<div class="thumb">
+<img src="https://books.google.co.id/books/publisher/content/images/frontcover/w19LEQAAQBAJ?fife=w300-h450"
+onerror="this.src='https://via.placeholder.com/160x235?text=No+Cover'">
 </div>
-</div></div>
+<div class="body">
+<span class="badge">Google Play Book</span>
+<h4>Manajemen Data</h4>
+<div class="meta">Ngakan Putu Anom Harjana</div>
+<p>Published academic book available on Google Play Books.</p>
+<div class="actions">
+<a class="btn btn-outline" target="_blank" href="https://books.google.com/books?id=w19LEQAAQBAJ">Preview</a>
+<a class="btn btn-primary" target="_blank" href="https://play.google.com/store/books/details?id=w19LEQAAQBAJ">Read Now</a>
+</div>
+</div>
+</div>
+
+<!-- BOOK 5 -->
+<div class="card item" data-title="Google Play Book PEVvEAAAQBAJ" data-key="book google play PEVvEAAAQBAJ">
+<div class="thumb">
+<img src="https://books.google.co.id/books/publisher/content/images/frontcover/PEVvEAAAQBAJ?fife=w300-h450"
+onerror="this.src='https://via.placeholder.com/160x235?text=No+Cover'">
+</div>
+<div class="body">
+<span class="badge">Google Play Book</span>
+<h4>Kumpulan Karya Esai Juara</h4>
+<div class="meta">Ngakan Putu Anom Harjana</div>
+<p>Published academic book available on Google Play Books.</p>
+<div class="actions">
+<a class="btn btn-outline" target="_blank" href="https://books.google.com/books?id=PEVvEAAAQBAJ">Preview</a>
+<a class="btn btn-primary" target="_blank" href="https://play.google.com/store/books/details?id=PEVvEAAAQBAJ">Read Now</a>
+</div>
+</div>
+</div>
+
+<!-- BOOK 6 -->
+<div class="card item" data-title="Google Play Book iQnJEAAAQBAJ" data-key="book google play iQnJEAAAQBAJ">
+<div class="thumb">
+<img src="https://books.google.co.id/books/publisher/content/images/frontcover/iQnJEAAAQBAJ?fife=w300-h450"
+onerror="this.src='https://via.placeholder.com/160x235?text=No+Cover'">
+</div>
+<div class="body">
+<span class="badge">Google Play Book</span>
+<h4>Petualangan Rahan dan Lalita</h4>
+<div class="meta">Ngakan Putu Anom Harjana</div>
+<p>Published academic book available on Google Play Books.</p>
+<div class="actions">
+<a class="btn btn-outline" target="_blank" href="https://books.google.com/books?id=iQnJEAAAQBAJ">Preview</a>
+<a class="btn btn-primary" target="_blank" href="https://play.google.com/store/books/details?id=iQnJEAAAQBAJ">Read Now</a>
+</div>
+</div>
+</div>
+
+<!-- BOOK 7 -->
+<div class="card item" data-title="Google Play Book VLo3EAAAQBAJ" data-key="book google play VLo3EAAAQBAJ">
+<div class="thumb">
+<img src="https://books.google.co.id/books/publisher/content/images/frontcover/VLo3EAAAQBAJ?fife=w300-h450"
+onerror="this.src='https://via.placeholder.com/160x235?text=No+Cover'">
+</div>
+<div class="body">
+<span class="badge">Google Play Book</span>
+<h4>Essay is Easy</h4>
+<div class="meta">Ngakan Putu Anom Harjana</div>
+<p>Published academic book available on Google Play Books.</p>
+<div class="actions">
+<a class="btn btn-outline" target="_blank" href="https://books.google.com/books?id=VLo3EAAAQBAJ">Preview</a>
+<a class="btn btn-primary" target="_blank" href="https://play.google.com/store/books/details?id=VLo3EAAAQBAJ">Read Now</a>
+</div>
+</div>
+</div>
+
+<!-- BOOK 8 -->
+<div class="card item" data-title="Google Play Book vYu0EAAAQBAJ" data-key="book google play vYu0EAAAQBAJ">
+<div class="thumb">
+<img src="https://books.google.co.id/books/publisher/content/images/frontcover/vYu0EAAAQBAJ?fife=w300-h450"
+onerror="this.src='https://via.placeholder.com/160x235?text=No+Cover'">
+</div>
+<div class="body">
+<span class="badge">Google Play Book</span>
+<h4>Perilaku Kesehatan</h4>
+<div class="meta">Ngakan Putu Anom Harjana</div>
+<p>Published academic book available on Google Play Books.</p>
+<div class="actions">
+<a class="btn btn-outline" target="_blank" href="https://books.google.com/books?id=vYu0EAAAQBAJ">Preview</a>
+<a class="btn btn-primary" target="_blank" href="https://play.google.com/store/books/details?id=vYu0EAAAQBAJ">Read Now</a>
+</div>
+</div>
+</div>
+
+<!-- BOOK 9 -->
+<div class="card item" data-title="Google Play Book _kdEEQAAQBAJ" data-key="book google play _kdEEQAAQBAJ">
+<div class="thumb">
+<img src="https://books.google.co.id/books/publisher/content/images/frontcover/_kdEEQAAQBAJ?fife=w300-h450"
+onerror="this.src='https://via.placeholder.com/160x235?text=No+Cover'">
+</div>
+<div class="body">
+<span class="badge">Google Play Book</span>
+<h4>How to Write a Winning Essay for Scholarship</h4>
+<div class="meta">Ngakan Putu Anom Harjana</div>
+<p>Published academic book available on Google Play Books.</p>
+<div class="actions">
+<a class="btn btn-outline" target="_blank" href="https://books.google.com/books?id=_kdEEQAAQBAJ">Preview</a>
+<a class="btn btn-primary" target="_blank" href="https://play.google.com/store/books/details?id=_kdEEQAAQBAJ">Read Now</a>
+</div>
+</div>
+</div>
+
+<!-- BOOK 10 -->
+<div class="card item" data-title="Google Play Book z8t6EAAAQBAJ" data-key="book google play z8t6EAAAQBAJ">
+<div class="thumb">
+<img src="https://books.google.co.id/books/publisher/content/images/frontcover/z8t6EAAAQBAJ?fife=w300-h450"
+onerror="this.src='https://via.placeholder.com/160x235?text=No+Cover'">
+</div>
+<div class="body">
+<span class="badge">Google Play Book</span>
+<h4>Panduan Program HIV dan IMS Komprehensif</h4>
+<div class="meta">Ngakan Putu Anom Harjana</div>
+<p>Published academic book available on Google Play Books.</p>
+<div class="actions">
+<a class="btn btn-outline" target="_blank" href="https://books.google.com/books?id=z8t6EAAAQBAJ">Preview</a>
+<a class="btn btn-primary" target="_blank" href="https://play.google.com/store/books/details?id=z8t6EAAAQBAJ">Read Now</a>
+</div>
+</div>
+</div>
+
+<!-- BOOK 11 -->
+<div class="card item" data-title="Google Play Book oct6EAAAQBAJ" data-key="book google play oct6EAAAQBAJ">
+<div class="thumb">
+<img src="https://books.google.co.id/books/publisher/content/images/frontcover/oct6EAAAQBAJ?fife=w300-h450"
+onerror="this.src='https://via.placeholder.com/160x235?text=No+Cover'">
+</div>
+<div class="body">
+<span class="badge">Google Play Book</span>
+<h4>Modul Training of Facillitator Program HIV dan IMS Komprehensif</h4>
+<div class="meta">Ngakan Putu Anom Harjana</div>
+<p>Published academic book available on Google Play Books.</p>
+<div class="actions">
+<a class="btn btn-outline" target="_blank" href="https://books.google.com/books?id=oct6EAAAQBAJ">Preview</a>
+<a class="btn btn-primary" target="_blank" href="https://play.google.com/store/books/details?id=oct6EAAAQBAJ">Read Now</a>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<!-- PAPERS -->
+<div class="panel" id="papers">
+<div class="track">
+
+<div class="card item" data-title="Latest Preprint Manuscript" data-key="research square hiv preprint">
+
+<div class="thumb">
+<div class="mockup">📄</div>
+</div>
+
+<div class="body">
+<span class="badge">Research Square</span>
+<h4>Latest Preprint Manuscript</h4>
+<div class="meta">Research Team</div>
+<p>Open preprint manuscript hosted on Research Square.</p>
+
+<div class="actions">
+<a class="btn btn-primary" target="_blank"
+href="https://www.researchsquare.com/article/rs-8651198/v1">
+Read Now
+</a>
+</div>
+</div>
+</div>
+
+
+<div class="card item" data-title="Open Repository Paper" data-key="zenodo repository policy paper">
+
+<div class="thumb">
+<div class="mockup">📑</div>
+</div>
+
+<div class="body">
+<span class="badge">Zenodo</span>
+<h4>Open Repository Paper</h4>
+<div class="meta">Research Team</div>
+<p>Working paper archived in Zenodo repository.</p>
+
+<div class="actions">
+<a class="btn btn-primary" target="_blank"
+href="https://zenodo.org/records/19704531">
+Read Now
+</a>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<!-- APPS -->
+<div class="panel" id="apps">
+<div class="track">
+
+<div class="card item" data-title="Innovation Demo App" data-key="prototype dashboard app tool">
+
+<div class="thumb">
+<div class="mockup">🚀</div>
+</div>
+
+<div class="body">
+<span class="badge">Prototype</span>
+<h4>Innovation Demo App</h4>
+<div class="meta">Web Application</div>
+<p>Interactive prototype, dashboard, or digital tool.</p>
+
+<div class="actions">
+<a class="btn btn-primary" target="_blank"
+href="https://example.com">
+Open Now
+</a>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 </section>
+
+
+
 <script>
-document.querySelectorAll('.tab-btn').forEach(btn=>{btn.onclick=()=>{document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));document.querySelectorAll('.carousel-wrap').forEach(w=>w.classList.remove('active'));btn.classList.add('active');document.getElementById(btn.dataset.target).classList.add('active')}});
-document.getElementById('librarySearch').addEventListener('input',function(){const q=this.value.toLowerCase();document.querySelectorAll('.card').forEach(card=>{card.style.display=card.dataset.search.includes(q)?'grid':'none';});});
+const tabs = document.querySelectorAll('.tab');
+const panels = document.querySelectorAll('.panel');
+
+tabs.forEach(btn=>{
+btn.onclick=()=>{
+tabs.forEach(x=>x.classList.remove('active'));
+panels.forEach(x=>x.classList.remove('active'));
+btn.classList.add('active');
+document.getElementById(btn.dataset.tab).classList.add('active');
+runFilter();
+}
+});
+
+document.getElementById('searchLib').addEventListener('input',runFilter);
+document.getElementById('sortLib').addEventListener('change',runFilter);
+
+function runFilter(){
+
+const q = document.getElementById('searchLib').value.toLowerCase();
+const sort = document.getElementById('sortLib').value;
+
+document.querySelectorAll('.panel').forEach(panel=>{
+
+const cards = [...panel.querySelectorAll('.item')];
+
+cards.forEach(card=>{
+const match =
+card.dataset.key.toLowerCase().includes(q) ||
+card.dataset.title.toLowerCase().includes(q);
+
+card.style.display = match ? 'grid' : 'none';
+});
+
+cards.sort((a,b)=>{
+return sort==='az'
+? a.dataset.title.localeCompare(b.dataset.title)
+: b.dataset.title.localeCompare(a.dataset.title);
+});
+
+cards.forEach(card=>{
+card.parentNode.appendChild(card);
+});
+
+});
+
+}
 </script>
 
 
