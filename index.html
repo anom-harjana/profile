@@ -1,0 +1,1037 @@
+<!-- FULL UPDATED HTML CODE -->
+<!-- Copy paste into index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ngakan Putu Anom Harjana | Executive Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--primary:#0b2e73;
+--secondary:#173d92;
+--light:#f7f9fc;
+--white:#ffffff;
+--text:#1f2c46;
+--muted:#71809b;
+--shadow:0 20px 45px rgba(0,0,0,.08);
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:var(--light);
+color:var(--text);
+line-height:1.6;
+overflow-x:hidden;
+}
+
+.container{
+width:92%;
+max-width:1380px;
+margin:auto;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+header{
+position:sticky;
+top:0;
+z-index:999;
+background:rgba(255,255,255,.92);
+backdrop-filter:blur(10px);
+box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 0;
+gap:20px;
+}
+
+.logo h2{
+font-size:23px;
+font-weight:800;
+color:var(--primary);
+line-height:1.1;
+}
+
+.logo span{
+font-size:13px;
+color:var(--muted);
+}
+
+.menu{
+display:flex;
+gap:22px;
+list-style:none;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.menu a{
+font-size:14px;
+font-weight:600;
+transition:.3s;
+}
+
+.menu a:hover{
+color:var(--primary);
+}
+
+.btn{
+background:linear-gradient(135deg,var(--primary),var(--secondary));
+color:#fff;
+padding:12px 18px;
+border-radius:10px;
+font-weight:600;
+box-shadow:var(--shadow);
+}
+
+.hero{
+padding:90px 0;
+background:linear-gradient(135deg,#eef4ff,#ffffff);
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:1.15fr 1fr;
+gap:45px;
+align-items:center;
+}
+
+.hero h1{
+font-size:58px;
+line-height:1.05;
+font-weight:800;
+margin-bottom:22px;
+color:var(--primary);
+animation:fadeUp 1s ease;
+}
+
+.hero p{
+font-size:18px;
+color:var(--muted);
+margin-bottom:30px;
+animation:fadeUp 1.2s ease;
+}
+
+.actions{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.outline{
+border:2px solid var(--primary);
+padding:12px 18px;
+border-radius:10px;
+font-weight:600;
+color:var(--primary);
+}
+
+.card-hero{
+background:#fff;
+padding:38px;
+border-radius:24px;
+box-shadow:var(--shadow);
+animation:float 4s ease-in-out infinite;
+}
+
+.avatar{
+width:130px;
+height:130px;
+border-radius:50%;
+margin:auto;
+background:#dce7ff;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:48px;
+font-weight:800;
+color:var(--primary);
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:14px;
+margin-top:24px;
+}
+
+.stat{
+background:#f4f7ff;
+padding:15px;
+border-radius:14px;
+text-align:center;
+}
+
+.stat h3{
+font-size:26px;
+color:var(--primary);
+}
+
+.stat span{
+font-size:12px;
+color:var(--muted);
+}
+
+section{
+padding:75px 0;
+}
+
+.top{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:28px;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.top h2{
+font-size:38px;
+font-weight:800;
+color:var(--primary);
+}
+
+.viewall{
+font-weight:700;
+color:var(--secondary);
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:24px;
+}
+
+.card{
+background:#fff;
+padding:28px;
+border-radius:20px;
+box-shadow:0 12px 35px rgba(0,0,0,.05);
+transition:.35s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 25px 45px rgba(0,0,0,.08);
+}
+
+.card h3{
+font-size:20px;
+margin-bottom:10px;
+color:var(--primary);
+}
+
+.card p{
+font-size:15px;
+color:var(--muted);
+}
+
+.tag{
+display:inline-block;
+margin-top:14px;
+padding:6px 10px;
+border-radius:20px;
+background:#edf3ff;
+font-size:12px;
+font-weight:700;
+color:var(--primary);
+margin-right:6px;
+}
+
+.timeline{
+display:grid;
+gap:18px;
+}
+
+.item{
+background:#fff;
+padding:24px;
+border-radius:18px;
+box-shadow:0 10px 28px rgba(0,0,0,.05);
+}
+
+.item h3{
+color:var(--primary);
+}
+
+.item small{
+display:block;
+margin-bottom:8px;
+color:var(--muted);
+font-weight:600;
+}
+
+footer{
+background:var(--primary);
+color:#fff;
+padding:65px 0 30px;
+margin-top:30px;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+}
+
+footer h4{
+font-size:22px;
+margin-bottom:12px;
+}
+
+footer p{
+color:#dbe4ff;
+font-size:15px;
+}
+
+.copy{
+margin-top:30px;
+text-align:center;
+font-size:14px;
+color:#b9c9ff;
+}
+
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(40px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-10px);}
+}
+
+@media(max-width:980px){
+.hero-grid{
+grid-template-columns:1fr;
+}
+.menu{
+display:none;
+}
+.hero h1{
+font-size:42px;
+}
+.top h2{
+font-size:30px;
+}
+}
+
+@media(max-width:600px){
+.hero{
+padding:55px 0;
+}
+.hero h1{
+font-size:34px;
+}
+.actions a{
+width:100%;
+text-align:center;
+}
+.stats{
+grid-template-columns:1fr;
+}
+}
+
+/* ===============================
+BLOG SECTION
+=============================== */
+
+.blog-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:24px;
+}
+
+.blog-card{
+background:#fff;
+padding:28px;
+border-radius:22px;
+box-shadow:0 12px 30px rgba(0,0,0,.06);
+transition:.35s;
+}
+
+.blog-card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 45px rgba(0,0,0,.09);
+}
+
+.blog-card h3{
+font-size:21px;
+margin-bottom:12px;
+color:#0b2e73;
+}
+
+.blog-card p{
+font-size:15px;
+line-height:1.7;
+color:#6d7a95;
+margin-bottom:14px;
+}
+
+.meta{
+font-size:13px;
+font-weight:600;
+color:#1a4cc2;
+}
+
+/* ===============================
+WIDGET
+=============================== */
+
+.widget-wrap{
+display:grid;
+grid-template-columns:1fr 420px;
+gap:30px;
+align-items:start;
+}
+
+.widget-card{
+background:#fff;
+padding:25px;
+border-radius:24px;
+box-shadow:0 12px 30px rgba(0,0,0,.06);
+}
+
+.linkedin-box{
+border-radius:16px;
+overflow:hidden;
+min-height:520px;
+border:1px solid #eef1f7;
+}
+
+@media(max-width:980px){
+
+.widget-wrap{
+grid-template-columns:1fr;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container navbar">
+
+<div class="logo">
+<h2>Ngakan Putu Anom Harjana</h2>
+<span>Researcher • Consultant • Lecturer</span>
+</div>
+
+<ul class="menu">
+<li><a href="#">Home</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#portfolio">Portfolio</a></li>
+<li><a href="#research">Research</a></li>
+<li><a href="#blog">Blog</a></li>
+<li><a href="#" class="btn">Download CV</a></li>
+</ul>
+
+</div>
+</header>
+
+<section class="hero">
+<div class="container hero-grid">
+
+<div>
+<h1>Advancing Public Health Through Strategy, Research & Innovation</h1>
+
+<p>
+National and international consultant with expertise in HIV, health systems, digital health, analytics, and evidence-based policymaking.
+</p>
+
+<div class="actions">
+<a href="#projects" class="btn">View My Work</a>
+<a href="#contact" class="outline">Contact Me</a>
+</div>
+</div>
+
+<div class="card-hero">
+<div class="avatar">AH</div>
+
+<div class="stats">
+<div class="stat">
+<h3>57+</h3>
+<span>Works</span>
+</div>
+
+<div class="stat">
+<h3>362+</h3>
+<span>Citations</span>
+</div>
+
+<div class="stat">
+<h3>10+</h3>
+<span>Years</span>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="projects">
+<div class="container">
+
+<div class="top">
+<h2>Projects</h2>
+<a href="projects.html" class="viewall">View All →</a>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>National HIV Action Plan</h3>
+<p>Consultant for Indonesia HIV & STI RAN 2025–2030.</p>
+<span class="tag">Policy</span>
+</div>
+
+<div class="card">
+<h3>WHO Timor Leste</h3>
+<p>HIV Sentinel Surveillance Plus and M&E system.</p>
+<span class="tag">WHO</span>
+</div>
+
+<div class="card">
+<h3>PrEP Indonesia</h3>
+<p>Technical assistance for community PrEP rollout.</p>
+<span class="tag">UNAIDS</span>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="experience">
+<div class="container">
+
+<div class="top">
+<h2>Experience</h2>
+<a href="experience.html" class="viewall">View All →</a>
+</div>
+
+<div class="timeline">
+
+<div class="item">
+<h3>Lecturer – Udayana University</h3>
+<small>2021 – Present</small>
+<p>Teaching statistics, demography, GIS, modeling, and health systems.</p>
+</div>
+
+<div class="item">
+<h3>Secretary – CPHI</h3>
+<small>Current</small>
+<p>Managing strategic research and innovation programs.</p>
+</div>
+
+<div class="item">
+<h3>Consultant</h3>
+<small>2021 – Present</small>
+<p>WHO, UNICEF, UNAIDS, UNFPA, USAID, Global Fund.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="portfolio">
+<div class="container">
+
+<div class="top">
+<h2>Portfolio</h2>
+<a href="portfolio.html" class="viewall">View All →</a>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Books</h3>
+<p>Published books on HIV, health behavior, digital health, and research capacity.</p>
+<span class="tag">Books</span>
+</div>
+
+<div class="card">
+<h3>Working Papers</h3>
+<p>Advanced modeling papers, health financing, machine learning, climate-health studies.</p>
+<span class="tag">Research</span>
+</div>
+
+<div class="card">
+<h3>Prototypes</h3>
+<p>Tanya NIRA, Dashboard Indonesia, Kita Banget App, ICHP Platform.</p>
+<span class="tag">Innovation</span>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- ===============================
+CSS TAMBAHKAN DI <style>
+=============================== -->
+<style>
+.research-layout{
+display:grid;
+grid-template-columns:1.2fr .8fr;
+gap:28px;
+align-items:start;
+}
+
+.manuscript-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:24px;
+}
+
+.paper-card{
+background:#fff;
+border-radius:22px;
+padding:24px;
+box-shadow:0 12px 35px rgba(0,0,0,.06);
+transition:.35s;
+}
+
+.paper-card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,.09);
+}
+
+.paper-card h3{
+font-size:19px;
+margin-bottom:10px;
+color:#0b2e73;
+line-height:1.35;
+}
+
+.paper-card p{
+font-size:14px;
+color:#6c7894;
+margin-bottom:16px;
+}
+
+.paper-preview{
+border-radius:16px;
+overflow:hidden;
+border:1px solid #edf1f7;
+}
+
+.paper-preview iframe{
+width:100%;
+height:390px;
+border:none;
+}
+
+.paper-link{
+display:inline-block;
+margin-top:14px;
+font-size:14px;
+font-weight:700;
+color:#1a4cc2;
+text-decoration:none;
+}
+
+/* GOOGLE SCHOLAR */
+.scholar-card{
+background:#fff;
+border-radius:22px;
+padding:24px;
+box-shadow:0 12px 35px rgba(0,0,0,.06);
+position:sticky;
+top:110px;
+}
+
+.scholar-card h3{
+font-size:22px;
+margin-bottom:10px;
+color:#0b2e73;
+}
+
+.scholar-card p{
+font-size:14px;
+color:#6c7894;
+margin-bottom:18px;
+}
+
+.scholar-box{
+border-radius:16px;
+overflow:hidden;
+border:1px solid #edf1f7;
+background:#fafbfd;
+}
+
+.scholar-box iframe{
+width:100%;
+height:920px;
+border:none;
+}
+
+@media(max-width:1100px){
+
+.research-layout{
+grid-template-columns:1fr;
+}
+
+.scholar-card{
+position:relative;
+top:auto;
+}
+
+.scholar-box iframe{
+height:720px;
+}
+
+}
+
+@media(max-width:768px){
+
+.paper-preview iframe{
+height:320px;
+}
+
+.scholar-box iframe{
+height:620px;
+}
+
+}
+
+@media(max-width:576px){
+
+.paper-card,
+.scholar-card{
+padding:20px;
+}
+
+.paper-preview iframe{
+height:280px;
+}
+
+.scholar-box iframe{
+height:560px;
+}
+
+}
+</style>
+
+
+
+<!-- ===============================
+SECTION RESEARCH
+=============================== -->
+<section id="research">
+<div class="container">
+
+<div class="top">
+<h2>Research Highlights</h2>
+<a href="https://scholar.google.com/citations?user=Jl9-RAEAAAAJ&hl=id&oi=ao" target="_blank" class="viewall">
+Google Scholar →
+</a>
+</div>
+
+<div class="research-layout">
+
+<!-- LEFT SIDE = PAPERS -->
+<div class="manuscript-grid">
+
+<!-- PAPER 1 -->
+<div class="paper-card">
+<h3>MSM Health Risk in Bali</h3>
+<p>Journal of Men's Health (2024)</p>
+
+<div class="paper-preview">
+<iframe 
+src="https://journals.sagepub.com/doi/abs/10.1177/10105395231185982"
+loading="lazy"
+title="MSM Health Risk in Bali">
+</iframe>
+</div>
+
+<a href="https://journals.sagepub.com/doi/abs/10.1177/10105395231185982" target="_blank" class="paper-link">
+Open Manuscript →
+</a>
+</div>
+
+
+
+<!-- PAPER 2 -->
+<div class="paper-card">
+<h3>COVID Mental Health Study</h3>
+<p>Frontiers in Public Health</p>
+
+<div class="paper-preview">
+<iframe 
+src="https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2021.630295/full"
+loading="lazy"
+title="COVID Mental Health Study">
+</iframe>
+</div>
+
+<a href="https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2021.630295/full" target="_blank" class="paper-link">
+Open Manuscript →
+</a>
+</div>
+
+
+
+<!-- PAPER 3 -->
+<div class="paper-card">
+<h3>HIV Disclosure Among Women</h3>
+<p>AIDS Care</p>
+
+<div class="paper-preview">
+<iframe 
+src="https://www.tandfonline.com/doi/abs/10.1080/09540121.2023.2299746"
+loading="lazy"
+title="HIV Disclosure Among Women">
+</iframe>
+</div>
+
+<a href="https://www.tandfonline.com/doi/abs/10.1080/09540121.2023.2299746" target="_blank" class="paper-link">
+Open Manuscript →
+</a>
+</div>
+
+</div>
+
+
+
+<!-- RIGHT SIDE = GOOGLE SCHOLAR -->
+<div class="scholar-card">
+
+<h3>Google Scholar Profile</h3>
+
+<p>
+Live academic profile featuring citations, h-index, publication list, and latest scholarly outputs.
+</p>
+
+<div class="scholar-box">
+
+<iframe 
+src="https://scholar.google.com/citations?user=Jl9-RAEAAAAJ&hl=id&oi=ao"
+loading="lazy"
+title="Google Scholar Profile">
+</iframe>
+
+</div>
+
+<a href="https://scholar.google.com/citations?user=Jl9-RAEAAAAJ&hl=id&oi=ao" target="_blank" class="paper-link">
+Open Full Profile →
+</a>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- =========================
+CSS TAMBAHKAN DI <style>
+========================= -->
+<style>
+.insight-layout{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+align-items:start;
+}
+
+.right-stack{
+display:grid;
+gap:24px;
+}
+
+@media(max-width:992px){
+
+.insight-layout{
+grid-template-columns:1fr;
+gap:24px;
+}
+
+.blog-grid{
+grid-template-columns:1fr;
+}
+
+.linkedin-box iframe{
+height:480px;
+}
+
+}
+
+@media(max-width:576px){
+
+.linkedin-box iframe{
+height:420px;
+}
+
+.top h2{
+font-size:28px;
+line-height:1.2;
+}
+
+.blog-card,
+.widget-card{
+padding:22px;
+}
+
+}
+</style>
+
+
+
+<!-- =========================
+HTML SECTION
+========================= -->
+<section id="insights">
+<div class="container">
+
+<div class="top">
+<h2>Insights, Blog & Academic Visibility</h2>
+</div>
+
+<div class="insight-layout">
+
+<!-- =========================
+LEFT COLUMN = BLOG
+========================= -->
+<div>
+
+<div class="blog-grid">
+
+<div class="blog-card">
+<h3>How Indonesia Can Achieve Triple 95 HIV Targets</h3>
+<p>
+Strategic pathways, financing scenarios, and service transformation required to accelerate progress.
+</p>
+<div class="meta">Policy Insight • Jan 2026</div>
+</div>
+
+<div class="blog-card">
+<h3>Why Public Health Needs Better Data Storytelling</h3>
+<p>
+How dashboards and evidence communication influence policy decisions.
+</p>
+<div class="meta">Analytics • Dec 2025</div>
+</div>
+
+</div>
+
+<div style="margin-top:20px;">
+<a href="https://medium.com/" target="_blank" class="viewall">
+Visit My Medium →
+</a>
+</div>
+
+</div>
+
+
+
+<!-- =========================
+RIGHT COLUMN = LINKEDIN
+========================= -->
+<div class="right-stack">
+
+<div class="widget-card">
+<h3 style="margin-bottom:15px;">Latest LinkedIn Post</h3>
+
+<div class="linkedin-box">
+
+<iframe 
+src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7452986388297457664"
+width="100%"
+height="560"
+frameborder="0"
+allowfullscreen
+title="Embedded LinkedIn Post">
+</iframe>
+
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<footer id="contact">
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+<h4>Contact</h4>
+<p>Denpasar, Bali, Indonesia</p>
+<p>Email: your@email.com</p>
+<p>LinkedIn: linkedin.com/in/yourname</p>
+</div>
+
+<div>
+<h4>Expertise</h4>
+<p>HIV / STI Programs</p>
+<p>Health Policy</p>
+<p>Analytics</p>
+<p>Digital Health</p>
+</div>
+
+<div>
+<h4>Availability</h4>
+<p>Consultancy</p>
+<p>Research Collaboration</p>
+<p>Training & Mentoring</p>
+</div>
+
+</div>
+
+<div class="copy">
+© 2026 Ngakan Putu Anom Harjana | Executive Portfolio
+</div>
+
+</div>
+</footer>
+
+<script>
+const cards = document.querySelectorAll('.blog-card,.widget-card');
+
+window.addEventListener('scroll',()=>{
+cards.forEach(card=>{
+const top = card.getBoundingClientRect().top;
+if(top < window.innerHeight - 80){
+card.style.opacity = "1";
+card.style.transform = "translateY(0)";
+}
+});
+});
+
+cards.forEach(card=>{
+card.style.opacity="0";
+card.style.transform="translateY(30px)";
+card.style.transition="all .8s ease";
+});
+</script>
+
+</body>
+</html>
