@@ -1,0 +1,1450 @@
+<!-- FULL UPDATED HTML CODE -->
+<!-- Copy paste into index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ngakan Putu Anom Harjana | Executive Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--primary:#0b2e73;
+--secondary:#173d92;
+--light:#f7f9fc;
+--white:#ffffff;
+--text:#1f2c46;
+--muted:#71809b;
+--shadow:0 20px 45px rgba(0,0,0,.08);
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:var(--light);
+color:var(--text);
+line-height:1.6;
+overflow-x:hidden;
+}
+
+.container{
+width:92%;
+max-width:1380px;
+margin:auto;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+header{
+position:sticky;
+top:0;
+z-index:999;
+background:rgba(255,255,255,.92);
+backdrop-filter:blur(10px);
+box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 0;
+gap:20px;
+}
+
+.logo h2{
+font-size:23px;
+font-weight:800;
+color:var(--primary);
+line-height:1.1;
+}
+
+.logo span{
+font-size:13px;
+color:var(--muted);
+}
+
+.menu{
+display:flex;
+gap:22px;
+list-style:none;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.menu a{
+font-size:14px;
+font-weight:600;
+transition:.3s;
+}
+
+.menu a:hover{
+color:var(--primary);
+}
+
+.btn{
+background:linear-gradient(135deg,var(--primary),var(--secondary));
+color:#fff;
+padding:12px 18px;
+border-radius:10px;
+font-weight:600;
+box-shadow:var(--shadow);
+}
+
+.hero{
+padding:90px 0;
+background:linear-gradient(135deg,#eef4ff,#ffffff);
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:1.15fr 1fr;
+gap:45px;
+align-items:center;
+}
+
+.hero h1{
+font-size:58px;
+line-height:1.05;
+font-weight:800;
+margin-bottom:22px;
+color:var(--primary);
+animation:fadeUp 1s ease;
+}
+
+.hero p{
+font-size:18px;
+color:var(--muted);
+margin-bottom:30px;
+animation:fadeUp 1.2s ease;
+}
+
+.actions{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.outline{
+border:2px solid var(--primary);
+padding:12px 18px;
+border-radius:10px;
+font-weight:600;
+color:var(--primary);
+}
+
+.card-hero{
+background:#fff;
+padding:38px;
+border-radius:24px;
+box-shadow:var(--shadow);
+animation:float 4s ease-in-out infinite;
+}
+
+.avatar{
+width:130px;
+height:130px;
+border-radius:50%;
+margin:auto;
+background:#dce7ff;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:48px;
+font-weight:800;
+color:var(--primary);
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:14px;
+margin-top:24px;
+}
+
+.stat{
+background:#f4f7ff;
+padding:15px;
+border-radius:14px;
+text-align:center;
+}
+
+.stat h3{
+font-size:26px;
+color:var(--primary);
+}
+
+.stat span{
+font-size:12px;
+color:var(--muted);
+}
+
+section{
+padding:75px 0;
+}
+
+.top{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:28px;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.top h2{
+font-size:38px;
+font-weight:800;
+color:var(--primary);
+}
+
+.viewall{
+font-weight:700;
+color:var(--secondary);
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:24px;
+}
+
+.card{
+background:#fff;
+padding:28px;
+border-radius:20px;
+box-shadow:0 12px 35px rgba(0,0,0,.05);
+transition:.35s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 25px 45px rgba(0,0,0,.08);
+}
+
+.card h3{
+font-size:20px;
+margin-bottom:10px;
+color:var(--primary);
+}
+
+.card p{
+font-size:15px;
+color:var(--muted);
+}
+
+.tag{
+display:inline-block;
+margin-top:14px;
+padding:6px 10px;
+border-radius:20px;
+background:#edf3ff;
+font-size:12px;
+font-weight:700;
+color:var(--primary);
+margin-right:6px;
+}
+
+.timeline{
+display:grid;
+gap:18px;
+}
+
+.item{
+background:#fff;
+padding:24px;
+border-radius:18px;
+box-shadow:0 10px 28px rgba(0,0,0,.05);
+}
+
+.item h3{
+color:var(--primary);
+}
+
+.item small{
+display:block;
+margin-bottom:8px;
+color:var(--muted);
+font-weight:600;
+}
+
+footer{
+background:var(--primary);
+color:#fff;
+padding:65px 0 30px;
+margin-top:30px;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+}
+
+footer h4{
+font-size:22px;
+margin-bottom:12px;
+}
+
+footer p{
+color:#dbe4ff;
+font-size:15px;
+}
+
+.copy{
+margin-top:30px;
+text-align:center;
+font-size:14px;
+color:#b9c9ff;
+}
+
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(40px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-10px);}
+}
+
+@media(max-width:980px){
+.hero-grid{
+grid-template-columns:1fr;
+}
+.menu{
+display:none;
+}
+.hero h1{
+font-size:42px;
+}
+.top h2{
+font-size:30px;
+}
+}
+
+@media(max-width:600px){
+.hero{
+padding:55px 0;
+}
+.hero h1{
+font-size:34px;
+}
+.actions a{
+width:100%;
+text-align:center;
+}
+.stats{
+grid-template-columns:1fr;
+}
+}
+
+/* ===============================
+BLOG SECTION
+=============================== */
+
+.blog-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:24px;
+}
+
+.blog-card{
+background:#fff;
+padding:28px;
+border-radius:22px;
+box-shadow:0 12px 30px rgba(0,0,0,.06);
+transition:.35s;
+}
+
+.blog-card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 45px rgba(0,0,0,.09);
+}
+
+.blog-card h3{
+font-size:21px;
+margin-bottom:12px;
+color:#0b2e73;
+}
+
+.blog-card p{
+font-size:15px;
+line-height:1.7;
+color:#6d7a95;
+margin-bottom:14px;
+}
+
+.meta{
+font-size:13px;
+font-weight:600;
+color:#1a4cc2;
+}
+
+/* ===============================
+WIDGET
+=============================== */
+
+.widget-wrap{
+display:grid;
+grid-template-columns:1fr 420px;
+gap:30px;
+align-items:start;
+}
+
+.widget-card{
+background:#fff;
+padding:25px;
+border-radius:24px;
+box-shadow:0 12px 30px rgba(0,0,0,.06);
+}
+
+.linkedin-box{
+border-radius:16px;
+overflow:hidden;
+min-height:520px;
+border:1px solid #eef1f7;
+}
+
+@media(max-width:980px){
+
+.widget-wrap{
+grid-template-columns:1fr;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container navbar">
+
+<div class="logo">
+<h2>Ngakan Putu Anom Harjana, S.KM, M.A.</h2>
+<span>Researcher • Consultant • Lecturer</span>
+</div>
+
+<ul class="menu">
+<li><a href="index.html">Home</a></li>
+<li><a href="projects.html">Projects</a></li>
+<li><a href="experience.html">Experience</a></li>
+<li><a href="portfolio.html">Portfolio</a></li>
+<li><a href="https://1drv.ms/f/c/2b508d48c15c5913/IgBUsmpyYtkCQphAC15l2Ke4AdnMOsxlZdngFKLfIz5xUMg?e=j71Ppm" class="btn">Download CV</a></li>
+</ul>
+
+</div>
+</header>
+
+
+
+<!-- ===============================
+CSS TAMBAHKAN KE <style>
+=============================== -->
+<style>
+.timeline{
+position:relative;
+display:grid;
+gap:24px;
+}
+
+.exp-item{
+display:grid;
+grid-template-columns:72px 1fr;
+gap:20px;
+align-items:start;
+background:#fff;
+padding:24px;
+border-radius:22px;
+box-shadow:0 12px 35px rgba(0,0,0,.06);
+transition:all .35s ease;
+position:relative;
+overflow:hidden;
+}
+
+.exp-item:hover{
+transform:translateY(-10px);
+box-shadow:0 24px 45px rgba(11,46,115,.12);
+}
+
+.exp-item::before{
+content:"";
+position:absolute;
+left:35px;
+top:-20px;
+bottom:-20px;
+width:2px;
+background:linear-gradient(180deg,#dbe6ff,#0b2e73,#dbe6ff);
+opacity:.18;
+}
+
+.exp-icon{
+width:64px;
+height:64px;
+border-radius:18px;
+background:linear-gradient(135deg,#eaf1ff,#dbe6ff);
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+z-index:2;
+animation:floatExp 3s ease-in-out infinite;
+font-size:26px;
+color:#0b2e73;
+font-weight:700;
+}
+
+.exp-content h3{
+font-size:22px;
+color:#0b2e73;
+margin-bottom:6px;
+line-height:1.3;
+}
+
+.exp-content small{
+display:inline-block;
+font-size:13px;
+font-weight:700;
+color:#4f7cff;
+margin-bottom:10px;
+}
+
+.exp-content p{
+font-size:15px;
+color:#6d7a95;
+line-height:1.7;
+}
+
+.exp-item::after{
+content:"";
+position:absolute;
+top:0;
+left:0;
+height:100%;
+width:4px;
+background:linear-gradient(180deg,#0b2e73,#4f7cff);
+transform:scaleY(0);
+transform-origin:top;
+transition:.35s;
+}
+
+.exp-item:hover::after{
+transform:scaleY(1);
+}
+
+@keyframes floatExp{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-6px);}
+}
+
+@media(max-width:768px){
+
+.exp-item{
+grid-template-columns:1fr;
+gap:16px;
+}
+
+.exp-item::before{
+display:none;
+}
+
+.exp-icon{
+width:58px;
+height:58px;
+}
+
+.exp-content h3{
+font-size:20px;
+}
+
+}
+</style>
+
+
+
+<!-- ===============================
+SECTION RESEARCH EXPERIENCE
+=============================== -->
+
+<!-- ===============================
+SECTION RESEARCH EXPERIENCE 2025
+=============================== -->
+<section id="experience-2025">
+<div class="container">
+
+<div class="top">
+<h2>2025 Projects & Research Grants</h2>
+</div>
+
+<div class="timeline">
+
+<!-- ITEM 1 -->
+<div class="exp-item">
+<div class="exp-icon">25</div>
+<div class="exp-content">
+<h3>Community of Practice (CoP) Program Documentation</h3>
+<small>2025 | Principal Investigator</small>
+<p>
+Led documentation of good practices and lessons learned from Community of Practice (CoP) program implementation for Reproductive Health Content Creators in Indonesia (2020–2025).  
+<strong>Funder:</strong> Yayasan Siklus Sehat Indonesia (YSSI)  
+<strong>Project Value:</strong> IDR 50,000,000
+</p>
+</div>
+</div>
+
+<!-- ITEM 2 -->
+<div class="exp-item">
+<div class="exp-icon">25</div>
+<div class="exp-content">
+<h3>SDGs Youth Hub Program Documentation</h3>
+<small>2025 | Principal Investigator</small>
+<p>
+Led documentation of good practices and lessons learned from SDGs Youth Hub program implementation in Indonesia (2020–2025).  
+<strong>Funder:</strong> Yayasan Siklus Sehat Indonesia (YSSI)  
+<strong>Project Value:</strong> IDR 50,000,000
+</p>
+</div>
+</div>
+
+<!-- ITEM 3 -->
+<div class="exp-item">
+<div class="exp-icon">25</div>
+<div class="exp-content">
+<h3>HIV Sentinel Surveillance Plus (HSS+) – Timor Leste</h3>
+<small>2025 | Consultant Team Member</small>
+<p>
+Supported WHO Timor Leste and Ministry of Health Timor Leste on HIV Sentinel Surveillance Plus (HSS+) and development of Monitoring & Evaluation Guideline for the National AIDS Program.  
+<strong>Funder:</strong> WHO Timor Leste  
+<strong>Project Value:</strong> IDR 700,000,000
+</p>
+</div>
+</div>
+
+<!-- ITEM 4 -->
+<div class="exp-item">
+<div class="exp-icon">25</div>
+<div class="exp-content">
+<h3>ESLAB Program Endline Evaluation</h3>
+<small>2025 | Consultant Team Member</small>
+<p>
+Conducted endline evaluation of training and implementation support for ESLAB Program in four districts in Indonesia.  
+<strong>Funder:</strong> Yayasan Project HOPE  
+<strong>Project Value:</strong> IDR 120,000,000
+</p>
+</div>
+</div>
+
+<!-- ITEM 5 -->
+<div class="exp-item">
+<div class="exp-icon">25</div>
+<div class="exp-content">
+<h3>Baseline Study for EMTCT Pilot Implementation</h3>
+<small>2025 | Consultant Team Member</small>
+<p>
+Implemented baseline study for EMTCT pilot implementation in 15 districts across Indonesia.  
+<strong>Funder:</strong> UNICEF  
+<strong>Project Value:</strong> IDR 152,000,000
+</p>
+</div>
+</div>
+
+<!-- ITEM 6 -->
+<div class="exp-item">
+<div class="exp-icon">25</div>
+<div class="exp-content">
+<h3>Development of Pos Layanan Komunitas HIV & STI</h3>
+<small>2025 | Principal Investigator</small>
+<p>
+Led technical assistance for development of Pos Layanan Komunitas HIV and STI in 23 districts in Indonesia.  
+<strong>Funder:</strong> UNAIDS  
+<strong>Project Value:</strong> IDR 430,000,000
+</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- ===============================
+SECTION RESEARCH EXPERIENCE 2024
+=============================== -->
+<section id="experience">
+<div class="container">
+
+<div class="top">
+<h2>2024 Projects & Research Grants</h2>
+</div>
+
+<div class="timeline">
+
+<!-- ITEM 1 -->
+<div class="exp-item">
+<div class="exp-icon">24</div>
+<div class="exp-content">
+<h3>Development of EMTCT Monitoring & Evaluation Tools</h3>
+<small>2024 | Consultant Team Member</small>
+<p>
+Developed monitoring and evaluation tools for pilot implementation of the EMTCT program in 15 districts across Indonesia.  
+<strong>Funder:</strong> UNAIDS & UNICEF  
+<strong>Project Value:</strong> IDR 800,000,000
+</p>
+</div>
+</div>
+
+<!-- ITEM 2 -->
+<div class="exp-item">
+<div class="exp-icon">24</div>
+<div class="exp-content">
+<h3>Evaluation Study of RHRN2 Social Media Campaign</h3>
+<small>2024 | Principal Investigator</small>
+<p>
+Led national evaluation study of the Right Here Right Now 2 (RHRN2) campaign in Indonesia.  
+<strong>Funder:</strong> Yayasan Gemilang Sehat Indonesia  
+<strong>Project Value:</strong> IDR 200,000,000
+</p>
+</div>
+</div>
+
+<!-- ITEM 3 -->
+<div class="exp-item">
+<div class="exp-icon">24</div>
+<div class="exp-content">
+<h3>Healthcare Worker Perspectives on Influenza Vaccination</h3>
+<small>2024 | Consultant Team Member</small>
+<p>
+Conducted study on health workers’ perspectives toward influenza vaccination in Indonesia.  
+<strong>Funder:</strong> Ministry of Health RI & CDC Atlanta  
+<strong>Project Value:</strong> IDR 45,000,000
+</p>
+</div>
+</div>
+
+<!-- ITEM 4 -->
+<div class="exp-item">
+<div class="exp-icon">24</div>
+<div class="exp-content">
+<h3>Assessment of Social Contracting Implementation</h3>
+<small>2024 | Principal Investigator</small>
+<p>
+Led national assessment of social contracting implementation in Indonesia.  
+<strong>Funder:</strong> Jaringan Indonesia Positif  
+<strong>Project Value:</strong> IDR 60,000,000
+</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- ===============================
+SECTION RESEARCH EXPERIENCE 2023
+=============================== -->
+<section id="experience-2023">
+<div class="container">
+
+<div class="top">
+<h2>2023 Projects & Research Grants</h2>
+</div>
+
+<div class="timeline">
+
+<!-- ITEM 1 -->
+<div class="exp-item">
+<div class="exp-icon">23</div>
+<div class="exp-content">
+<h3>Engagement of Last Mile Populations and Community Structures</h3>
+<small>2023 | Principal Investigator</small>
+<p>
+Led study on engagement of last mile populations and community structures in the response to Tuberculosis, COVID-19, and other pandemics in Indonesia.  
+<strong>Funder:</strong> Jaringan Indonesia Positif & APCASO  
+<strong>Project Value:</strong> IDR 90,000,000
+</p>
+</div>
+</div>
+
+<!-- ITEM 2 -->
+<div class="exp-item">
+<div class="exp-icon">23</div>
+<div class="exp-content">
+<h3>HIV-related Stigma and Discrimination in Health Care Settings</h3>
+<small>2023 | Senior Researcher</small>
+<p>
+Served as senior researcher in national study on HIV-related stigma and discrimination in health care settings across Indonesia.  
+<strong>Funder:</strong> Ministry of Health RI & UNAIDS  
+<strong>Project Value:</strong> IDR 760,000,000
+</p>
+</div>
+</div>
+
+<!-- ITEM 3 -->
+<div class="exp-item">
+<div class="exp-icon">23</div>
+<div class="exp-content">
+<h3>Technical Assistance on PrEP Implementation</h3>
+<small>2023 | Consultant Team Member</small>
+<p>
+Provided technical assistance and implementation support for national PrEP program rollout in Indonesia.  
+<strong>Funder:</strong> UNAIDS  
+<strong>Project Value:</strong> IDR 1,173,900,000
+</p>
+</div>
+</div>
+
+<!-- ITEM 4 -->
+<div class="exp-item">
+<div class="exp-icon">23</div>
+<div class="exp-content">
+<h3>Community-based Surveys for Wolbachia Technology</h3>
+<small>2023 | Principal Investigator</small>
+<p>
+Led community-based surveys supporting implementation of Wolbachia technology to reduce transmission of Aedes aegypti-borne diseases in Bali.  
+<strong>Funder:</strong> World Mosquito Program  
+<strong>Project Value:</strong> IDR 375,000,000
+</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- ===============================
+SECTION RESEARCH EXPERIENCE 2022
+=============================== -->
+<section id="experience-2022">
+<div class="container">
+
+<div class="top">
+<h2>2022 Projects & Research Grants</h2>
+</div>
+
+<div class="timeline">
+
+<!-- ITEM 1 -->
+<div class="exp-item">
+<div class="exp-icon">22</div>
+<div class="exp-content">
+<h3>Maternal and Neonatal Services Pocketbook in Health Crises</h3>
+<small>2022 | Principal Investigator</small>
+<p>
+Led development of national pocketbook for maternal and neonatal services during health crisis situations in Indonesia.  
+<strong>Funder:</strong> UNFPA Indonesia  
+<strong>Project Value:</strong> IDR 70,400,000
+</p>
+</div>
+</div>
+
+<!-- ITEM 2 -->
+<div class="exp-item">
+<div class="exp-icon">22</div>
+<div class="exp-content">
+<h3>HIV and STI Services Module in Health Crises</h3>
+<small>2022 | Principal Investigator</small>
+<p>
+Led development of training modules and pocketbook for HIV and STI services during health crisis situations in Indonesia.  
+<strong>Funder:</strong> UNFPA Indonesia  
+<strong>Project Value:</strong> IDR 70,400,000
+</p>
+</div>
+</div>
+
+<!-- ITEM 3 -->
+<div class="exp-item">
+<div class="exp-icon">22</div>
+<div class="exp-content">
+<h3>Supporting Implementation of HIV Self Testing (HIVST)</h3>
+<small>2022 | Consultant Team Member</small>
+<p>
+Supported national implementation strategy and operationalization of HIV Self Testing (HIVST) program in Indonesia.  
+<strong>Funder:</strong> UNAIDS Indonesia  
+<strong>Project Value:</strong> IDR 1,208,208,000
+</p>
+</div>
+</div>
+
+<!-- ITEM 4 -->
+<div class="exp-item">
+<div class="exp-icon">22</div>
+<div class="exp-content">
+<h3>Integrated Monitoring and Evaluation System for HIVST</h3>
+<small>2022 | Principal Investigator</small>
+<p>
+Led development of integrated monitoring and evaluation system for HIV Self Testing (HIVST) in Indonesia.  
+<strong>Funder:</strong> UNAIDS Indonesia  
+<strong>Project Value:</strong> IDR 120,000,000
+</p>
+</div>
+</div>
+
+<!-- ITEM 5 -->
+<div class="exp-item">
+<div class="exp-icon">22</div>
+<div class="exp-content">
+<h3>Costing Study of HIVST Implementation</h3>
+<small>2022 | Consultant Team Member</small>
+<p>
+Conducted costing study for implementation and scale-up of HIV Self Testing (HIVST) in Indonesia.  
+<strong>Funder:</strong> UNAIDS Indonesia  
+<strong>Project Value:</strong> IDR 200,000,000
+</p>
+</div>
+</div>
+
+<!-- ITEM 6 -->
+<div class="exp-item">
+<div class="exp-icon">22</div>
+<div class="exp-content">
+<h3>Public Trust and Perception on COVID-19 Booster Vaccine</h3>
+<small>2022 | Consultant Team Member</small>
+<p>
+Conducted national study on public trust and perception toward COVID-19 booster vaccination in Indonesia.  
+<strong>Funder:</strong> SINOVAC  
+<strong>Project Value:</strong> IDR 350,000,000
+</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- ===============================
+SECTION RESEARCH EXPERIENCE 2021
+=============================== -->
+<section id="experience-2021">
+<div class="container">
+
+<div class="top">
+<h2>2021 Projects & Research Grants</h2>
+</div>
+
+<div class="timeline">
+
+<!-- ITEM 1 -->
+<div class="exp-item">
+<div class="exp-icon">21</div>
+<div class="exp-content">
+<h3>Comprehensive HIV and STI Community Program Guideline in Disaster Settings</h3>
+<small>2021 | Principal Investigator</small>
+<p>
+Led development of national guideline for comprehensive HIV and STI programs in disaster and health emergency settings at community level in Indonesia.  
+<strong>Funder:</strong> Jaringan Indonesia Positif & UNFPA Indonesia  
+<strong>Project Value:</strong> IDR 46,200,000
+</p>
+</div>
+</div>
+
+<!-- ITEM 2 -->
+<div class="exp-item">
+<div class="exp-icon">21</div>
+<div class="exp-content">
+<h3>Training of Facilitators (ToF) Module for HIV and STI Crisis Response</h3>
+<small>2021 | Principal Investigator</small>
+<p>
+Led development of Training of Facilitators (ToF) module for comprehensive HIV and STI programs in disaster and health crisis situations.  
+<strong>Funder:</strong> Jaringan Indonesia Positif & UNFPA Indonesia  
+<strong>Project Value:</strong> IDR 55,440,000
+</p>
+</div>
+</div>
+
+<!-- ITEM 3 -->
+<div class="exp-item">
+<div class="exp-icon">21</div>
+<div class="exp-content">
+<h3>Indonesia Readiness Assessment for EMTCT HIV</h3>
+<small>2021 | Principal Investigator</small>
+<p>
+Led national assessment of Indonesia’s readiness to eliminate mother-to-child transmission of HIV by 2022.  
+<strong>Funder:</strong> Jaringan Indonesia Positif & UNFPA Indonesia  
+<strong>Project Value:</strong> IDR 24,640,000
+</p>
+</div>
+</div>
+
+<!-- ITEM 4 -->
+<div class="exp-item">
+<div class="exp-icon">21</div>
+<div class="exp-content">
+<h3>HIV Status Disclosure among MSM and Transgender Women</h3>
+<small>2021 | Principal Investigator</small>
+<p>
+Conducted study on determinants of HIV status disclosure practice among MSM and transgender women in Bali, Indonesia.  
+<strong>Funder:</strong> Institute for Population and Social Research, Mahidol University  
+<strong>Project Value:</strong> IDR 20,000,000
+</p>
+</div>
+</div>
+
+<!-- ITEM 5 -->
+<div class="exp-item">
+<div class="exp-icon">21</div>
+<div class="exp-content">
+<h3>Rabies Control (RACON) Mobile Surveillance System</h3>
+<small>2021 | Consultant Team Member</small>
+<p>
+Contributed to development of Rabies Control (RACON), a mobile-based rabies surveillance information system in Bali Province.  
+<strong>Funder:</strong> LPPM Udayana University  
+<strong>Project Value:</strong> IDR 41,250,000
+</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+
+
+<!-- ===============================
+SECTION RESEARCH EXPERIENCE 2014-2020
+=============================== -->
+<section id="experience-2014-2020">
+<div class="container">
+
+<div class="top">
+<h2>2014–2020 Projects & Research Grants</h2>
+</div>
+
+<div class="timeline">
+
+<!-- 2020 -->
+<div class="exp-item">
+<div class="exp-icon">20</div>
+<div class="exp-content">
+<h3>Development of Kita Banget App for HIV Services</h3>
+<small>2020 | Consultant Team Member</small>
+<p>
+Contributed to development of Kita Banget mobile application to improve HIV services in Bali, Indonesia.  
+<strong>Funder:</strong> LPPM Udayana University  
+<strong>Project Value:</strong> IDR 150,000,000
+</p>
+</div>
+</div>
+
+<div class="exp-item">
+<div class="exp-icon">20</div>
+<div class="exp-content">
+<h3>Public Perception and Hand Hygiene during COVID-19</h3>
+<small>2020 | Consultant Team Member</small>
+<p>
+Conducted national study on public perception and hand hygiene behavior during the COVID-19 pandemic in Indonesia.  
+<strong>Funder:</strong> Center for Public Health Innovation, Udayana University  
+<strong>Project Value:</strong> IDR 15,000,000
+</p>
+</div>
+</div>
+
+<div class="exp-item">
+<div class="exp-icon">20</div>
+<div class="exp-content">
+<h3>Mental Health of Balinese Migrant Workers during COVID-19</h3>
+<small>2020 | Principal Investigator</small>
+<p>
+Led study on prevalence and determinants of depression, anxiety, and stress among Balinese migrant workers during COVID-19 pandemic.  
+<strong>Funder:</strong> Center for Public Health Innovation, Udayana University  
+<strong>Project Value:</strong> IDR 15,000,000
+</p>
+</div>
+</div>
+
+<!-- 2019-2020 -->
+<div class="exp-item">
+<div class="exp-icon">19</div>
+<div class="exp-content">
+<h3>Partner Notification Demonstration Sites</h3>
+<small>2019–2020 | Consultant Team Member</small>
+<p>
+Supported demonstration sites for assisted partner notification implementation in Indonesia.  
+<strong>Funder:</strong> World Health Organization Indonesia  
+<strong>Project Value:</strong> IDR 695,448,600
+</p>
+</div>
+</div>
+
+<div class="exp-item">
+<div class="exp-icon">19</div>
+<div class="exp-content">
+<h3>BENEFIT Breastfeeding Intervention Study</h3>
+<small>2019–2020 | Monitoring & Evaluation Officer</small>
+<p>
+Implementation study of BENEFIT intervention in five selected districts in East Java.  
+<strong>Funder:</strong> GAIN (Global Alliance for Improved Nutrition)  
+<strong>Project Value:</strong> IDR 2,913,668,175
+</p>
+</div>
+</div>
+
+<div class="exp-item">
+<div class="exp-icon">19</div>
+<div class="exp-content">
+<h3>Electronic Personal Health Record – Badung</h3>
+<small>2019–2020 | Principal Investigator</small>
+<p>
+Led development of electronic personal health record system in Badung Regency.  
+<strong>Funder:</strong> Health Department of Badung Regency  
+<strong>Project Value:</strong> IDR 139,000,000
+</p>
+</div>
+</div>
+
+<div class="exp-item">
+<div class="exp-icon">19</div>
+<div class="exp-content">
+<h3>SEKSI Online Sexual Health Study</h3>
+<small>2019–2020 | Consultant Team Member</small>
+<p>
+Online survey exploring identity, social interaction, and HIV prevention behavior among high-risk populations in Bali.  
+<strong>Funder:</strong> CPHI Udayana University & Kirby Institute UNSW Australia  
+<strong>Project Value:</strong> IDR 150,000,000
+</p>
+</div>
+</div>
+
+<div class="exp-item">
+<div class="exp-icon">19</div>
+<div class="exp-content">
+<h3>Stunting Prevention Mentoring Program</h3>
+<small>2019–2020 | Consultant Team Member</small>
+<p>
+Supported mentoring program for stunting prevention in Gianyar Regency, Bali.  
+<strong>Funder:</strong> Ministry of Health RI  
+<strong>Project Value:</strong> IDR 570,479,000
+</p>
+</div>
+</div>
+
+<!-- 2019 -->
+<div class="exp-item">
+<div class="exp-icon">19</div>
+<div class="exp-content">
+<h3>Patient Satisfaction Survey – PHC Buleleng</h3>
+<small>2019 | Principal Investigator</small>
+<p>
+Led patient satisfaction survey in Primary Health Care No. III, Buleleng District.  
+<strong>Project Value:</strong> IDR 6,000,000
+</p>
+</div>
+</div>
+
+<div class="exp-item">
+<div class="exp-icon">19</div>
+<div class="exp-content">
+<h3>Ideal Child Preference & Contraceptive Use in Bali</h3>
+<small>2019 | Consultant Team Member</small>
+<p>
+Study on impact of birth preference and ideal child number toward contraceptive participation in Bali Province.  
+<strong>Funder:</strong> Population & Family Planning Bureau Bali  
+<strong>Project Value:</strong> IDR 22,347,500
+</p>
+</div>
+</div>
+
+<div class="exp-item">
+<div class="exp-icon">19</div>
+<div class="exp-content">
+<h3>Patient Satisfaction Survey – Sanjiwani Hospital</h3>
+<small>2019 | Principal Investigator</small>
+<p>
+Led patient satisfaction survey in Sanjiwani Hospital, Gianyar Regency.  
+<strong>Project Value:</strong> IDR 49,995,000
+</p>
+</div>
+</div>
+
+<div class="exp-item">
+<div class="exp-icon">19</div>
+<div class="exp-content">
+<h3>Ten Steps to Successful Breastfeeding Assessment</h3>
+<small>2019 | Consultant Team Member</small>
+<p>
+Assessment of Ten Steps to Successful Breastfeeding and facilitation of evidence-based programming in East Java.  
+<strong>Funder:</strong> GAIN  
+<strong>Project Value:</strong> IDR 628,581,484
+</p>
+</div>
+</div>
+
+<div class="exp-item">
+<div class="exp-icon">19</div>
+<div class="exp-content">
+<h3>Nutrition & Environmental Problem Assessment</h3>
+<small>2019 | Data Manager</small>
+<p>
+Assessment among adolescents, pregnant women, and under-five children in Karangasem Regency.  
+<strong>Project Value:</strong> IDR 6,000,000
+</p>
+</div>
+</div>
+
+<!-- 2018-2020 -->
+<div class="exp-item">
+<div class="exp-icon">18</div>
+<div class="exp-content">
+<h3>Patient Satisfaction Survey – Gianyar Regency</h3>
+<small>2018–2020 | Principal Investigator</small>
+<p>
+Multi-year patient satisfaction survey in primary health care services across Gianyar Regency.  
+<strong>Project Value:</strong> IDR 55,980,000
+</p>
+</div>
+</div>
+
+<div class="exp-item">
+<div class="exp-icon">18</div>
+<div class="exp-content">
+<h3>Patient Satisfaction Survey – Denpasar City</h3>
+<small>2018–2020 | Principal Investigator</small>
+<p>
+Multi-year patient satisfaction survey in public primary health care services in Denpasar City.  
+<strong>Project Value:</strong> IDR 105,000,000
+</p>
+</div>
+</div>
+
+<!-- 2018 -->
+<div class="exp-item">
+<div class="exp-icon">18</div>
+<div class="exp-content">
+<h3>Young Health Program Baseline Study</h3>
+<small>2018 | Consultant Team Member</small>
+<p>
+Baseline study implemented in Cibinong, Jakarta, and Mataram.  
+<strong>Funder:</strong> PLAN International Indonesia  
+<strong>Project Value:</strong> IDR 134,080,000
+</p>
+</div>
+</div>
+
+<div class="exp-item">
+<div class="exp-icon">18</div>
+<div class="exp-content">
+<h3>Japanese Encephalitis Vaccine Coverage Survey</h3>
+<small>2018 | Data Manager</small>
+<p>
+Provincial vaccine coverage survey in Bali Province.  
+<strong>Funder:</strong> WHO Indonesia  
+<strong>Project Value:</strong> N/A
+</p>
+</div>
+</div>
+
+<div class="exp-item">
+<div class="exp-icon">18</div>
+<div class="exp-content">
+<h3>Outbreak Surveillance Information System</h3>
+<small>2018 | Principal Investigator</small>
+<p>
+Developed outbreak surveillance information system based on Epicollect5 data collection in Bali Province.  
+<strong>Project Value:</strong> IDR 3,000,000
+</p>
+</div>
+</div>
+
+<div class="exp-item">
+<div class="exp-icon">18</div>
+<div class="exp-content">
+<h3>Udayana One Health Student Club Study</h3>
+<small>2018 | Principal Investigator</small>
+<p>
+Research on student self-efficacy and cultural competence in health professional education.  
+<strong>Project Value:</strong> IDR 2,000,000
+</p>
+</div>
+</div>
+
+<!-- 2017 -->
+<div class="exp-item">
+<div class="exp-icon">17</div>
+<div class="exp-content">
+<h3>Janger Dance for Rabies Awareness</h3>
+<small>2017 | Consultant Team Member</small>
+<p>
+Creative media intervention to improve rabies awareness and participation through Balinese culture and art.  
+<strong>Project Value:</strong> IDR 5,000,000
+</p>
+</div>
+</div>
+
+<div class="exp-item">
+<div class="exp-icon">17</div>
+<div class="exp-content">
+<h3>Cinema in the Bus Project</h3>
+<small>2017 | Principal Investigator</small>
+<p>
+Evaluated intervention to increase adolescent knowledge on sexual and reproductive health.  
+<strong>Funder:</strong> David and Lucile Packard Foundation  
+<strong>Project Value:</strong> IDR 331,740,688
+</p>
+</div>
+</div>
+
+<!-- 2014-2016 -->
+<div class="exp-item">
+<div class="exp-icon">14</div>
+<div class="exp-content">
+<h3>Opinion Poll on Bali Smoke-Free Law</h3>
+<small>2014–2016 | Enumerator</small>
+<p>
+Public opinion polling regarding implementation of Bali Province smoke-free law.  
+<strong>Funder:</strong> International Union Against Tuberculosis and Lung Disease  
+<strong>Project Value:</strong> IDR 10,000,000
+</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+
+
+
+<!-- ===============================
+CSS TAMBAHKAN KE <style>
+=============================== -->
+<style>
+.portfolio-card{
+position:relative;
+overflow:hidden;
+transition:all .35s ease;
+}
+
+.portfolio-card:hover{
+transform:translateY(-12px);
+box-shadow:0 24px 48px rgba(11,46,115,.12);
+}
+
+.portfolio-icon{
+width:64px;
+height:64px;
+border-radius:18px;
+background:linear-gradient(135deg,#eaf1ff,#dbe6ff);
+display:flex;
+align-items:center;
+justify-content:center;
+margin-bottom:18px;
+animation:floatPortfolio 3s ease-in-out infinite;
+}
+
+.portfolio-icon svg{
+width:34px;
+height:34px;
+fill:#0b2e73;
+}
+
+.portfolio-card h3{
+margin-bottom:10px;
+font-size:22px;
+color:#0b2e73;
+}
+
+.portfolio-card p{
+margin-bottom:14px;
+color:#6d7a95;
+line-height:1.7;
+}
+
+.portfolio-card::after{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:4px;
+background:linear-gradient(90deg,#0b2e73,#4f7cff);
+transform:scaleX(0);
+transform-origin:left;
+transition:.35s;
+}
+
+.portfolio-card:hover::after{
+transform:scaleX(1);
+}
+
+@keyframes floatPortfolio{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-6px);}
+}
+</style>
+
+
+
+<footer id="contact">
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+<h4>Contact</h4>
+<p>Denpasar, Bali, Indonesia</p>
+<p>Email: anomharjana@unud.ac.id</p>
+<p>LinkedIn: linkedin.com/in/anomharjana</p>
+</div>
+
+<div>
+<h4>Expertise</h4>
+<p>HIV, STI, SRHR Programs</p>
+<p>Health Policy</p>
+<p>Health Modelling</p>
+<p>Digital Health</p>
+</div>
+
+<div>
+<h4>Availability</h4>
+<p>Consultancy</p>
+<p>Research Collaboration</p>
+<p>Training & Mentoring</p>
+</div>
+
+</div>
+
+<div class="copy">
+© 2026 Ngakan Putu Anom Harjana | Executive Portfolio
+</div>
+
+</div>
+</footer>
+
+<script>
+const cards = document.querySelectorAll('.blog-card,.widget-card');
+
+window.addEventListener('scroll',()=>{
+cards.forEach(card=>{
+const top = card.getBoundingClientRect().top;
+if(top < window.innerHeight - 80){
+card.style.opacity = "1";
+card.style.transform = "translateY(0)";
+}
+});
+});
+
+cards.forEach(card=>{
+card.style.opacity="0";
+card.style.transform="translateY(30px)";
+card.style.transition="all .8s ease";
+});
+</script>
+
+</body>
+</html>
